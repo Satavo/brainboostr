@@ -1,32 +1,20 @@
-/*В отзывах пстрелки перелистывающие отзывы*/
-const reviewsContainer = document.querySelector('.reviewers');
-const reviews = reviewsContainer.querySelectorAll('.review');
-const arrowLeft = document.querySelector('.arrow-left');
-const arrowRight = document.querySelector('.arrow-right');
+/*Текст джава скрипта*/
+/*alert("404 Error")*/
 
-let currentReviewIndex = 0;
+/*тестовый пример открытия другйо странгицы при нажатии на кнопку*/
+function openweb()
+{
+const btn = document.getElementById('btn');
 
-function showReview(index) {
-  reviews.forEach(review => review.style.display = 'none');
-  reviews[index].style.display = 'block';
+btn.addEventListener('click', () => 
+{
+  window.location.assign('test.html');
+});
 }
 
-arrowLeft.addEventListener('click', () => {
-  if (currentReviewIndex === 0) {
-    currentReviewIndex = reviews.length - 1;
-  } else {
-    currentReviewIndex--;
-  }
-  showReview(currentReviewIndex);
+/*бургер*/
+$(document).ready(function(){
+  $('.burger').click(function(event) {
+    $('.burger','.menu').toggleClass('active');
+  });
 });
-
-arrowRight.addEventListener('click', () => {
-  if (currentReviewIndex === reviews.length - 1) {
-    currentReviewIndex = 0;
-  } else {
-    currentReviewIndex++;
-  }
-  showReview(currentReviewIndex);
-});
-
-showReview(currentReviewIndex);

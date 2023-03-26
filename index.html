@@ -3,25 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BrainBoostr.str</title>
+    <title>BrainBoostr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">
+        <div onclick="goToBrainBoostr()" class="logo">
           <img src="img/Logo3.0_withoutground.png" alt="Logo">
         </div>
         <div class="burger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+            <span></span>
         </div>
         <nav class="menu">
           <div class="menu-container">
             <a href="#" class="menu-item">Войти</a>
             <a href="#" class="menu-item">Зарегистрироваться</a>
+            <a href="#" class="menu-item">Личный кабинет</a>
             <a href="#" class="menu-item">Найти преподавателя</a>
             <a href="#" class="menu-item">Преподавать</a>
           </div>
@@ -49,7 +48,7 @@
                         по ЕГЭ. У вас есть возможность
                         выбрать время, стоимость и даже
                         заменить специалиста.</p>
-                    <button onclick="openweb()" id="btn">Подробнее</button>
+                    <button onclick="First()" id="btn">Подробнее</button>
                 </div>
                 <div class="content_column">
                     <img src="img/2.png" alt="Картинка 2">
@@ -59,7 +58,7 @@
                         по ОГЭ. У вас есть возможность
                         выбрать время, стоимость и даже
                         заменить специалиста.</p>
-                    <button>Подробнее</button>
+                    <button onclick="Second()" id="btn2">Подробнее</button>
                 </div>
                 <div class="content_column">
                     <img src="img/3.png" alt="Картинка 3">
@@ -72,7 +71,7 @@
                         возможность выбрать время,
                         стоимость и даже заменить
                         специалиста.</p>
-                    <button>Подробнее</button>
+                    <button onclick="Third()" id="btn3">Подробнее</button>
                 </div>
                 <div class="content_column">
                     <img src="img/4 stack.jpg" alt="Картинка 4">
@@ -83,7 +82,7 @@
                         Здесь вы сможете получить помощь как
                         в написании курсовой рабоыт, так и к
                         подготовке к дипломной работе</p>
-                    <button>Подробнее</button>
+                    <button onclick="Fourth()" id="btn4">Подробнее</button>
                 </div>
             </div>
         </div>

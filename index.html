@@ -6,6 +6,7 @@
     <title>BrainBoostr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e472d9e-5853-4e13-9a74-16bfc39acbfc&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
@@ -18,11 +19,11 @@
         </div>
         <nav class="menu">
           <div class="menu-container">
-            <a href="#" class="menu-item">Войти</a>
-            <a href="#" class="menu-item">Зарегистрироваться</a>
-            <a href="#" class="menu-item">Личный кабинет</a>
-            <a href="#" class="menu-item">Найти преподавателя</a>
-            <a href="#" class="menu-item">Преподавать</a>
+            <a href="Enter" class="menu_enter">Войти</a>
+            <a href="Registration" class="menu_Registration">Зарегистрироваться</a>
+            <a href="MePage" class="menu_MePage">Личный кабинет</a>
+            <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
+            <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
           </div>
         </nav>
     </header>
@@ -229,19 +230,7 @@
           <p>+1 22 234 564</p>
           <p><a href="mailto:BrainBoostr@gmail.com">BrainBoostr@gmail.com</a></p>
         </div>
-        <div class="map-container" style="width: 600px; height: 500px">
-          <script src="https://api-maps.yandex.ru/2.1/?apikey=8a4df6b6-b3c2-40c2-904e-f0feb1b8a6aa&amp;lang=ru_RU" type="text/javascript"></script>
-          <script type="text/javascript">
-            ymaps.ready(init);
-            function init(){
-                var myMap = new ymaps.Map("map", {
-                    center: [56.009466,92.870236],
-                    zoom: 16
-                });
-            }
-          </script>
-          <div id="map"></div>
-        </div>
+        <div id="navigation" class="navigation-container" style="width: 100%; height: 500px"></div>
     </div>
 
     <footer>

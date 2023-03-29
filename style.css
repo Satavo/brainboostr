@@ -11,8 +11,13 @@ overflow: hidden;
 /* Общие стили для header */
 header {
   display: flex;
+  position: fixed;
   justify-content: space-between;
+  background-color: rgba(150, 150, 150, 0.5);
   align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 0px 40px;
   z-index: 2;
 }
@@ -41,8 +46,6 @@ header {
   position: absolute;
   top: 80px;
   right: 20px;
-  height: 50%;
-  width: 50%;
   background-color: #ffffff;
   padding: 10px;
   border: 1px solid #424242;
@@ -51,17 +54,60 @@ header {
 }
 
 .menu-container {
+  font-size: 16px;
+  color: #424242;
+  align-items:center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
+}
+
+.menu_enter {
+  border-radius: 5px;
+  background-color: #b8bc99;
+  color: #424242;
+  cursor: pointer;
+}
+
+.menu_Registration {
+  border-radius: 5px;
+  background-color: #b8bc99;
+  color: #424242;
+  cursor: pointer;
+}
+
+.menu_MePage {
+  border-radius: 5px;
+  background-color: #b8bc99;
+  color: #424242;
+  cursor: pointer;
+}
+
+.menu_FindMentor {
+  border-radius: 5px;
+  background-color: #b8bc99;
+  color: #424242;
+  cursor: pointer;
+}
+
+.menu_Mentoring {
+  border-radius: 5px;
+  background-color: #b8bc99;
+  color: #424242;
+  cursor: pointer;
 }
 
 .menu-container a {
   color: #424242;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
 
+.menu-container a:hover {
+  background-color: #eee;
 }
 
 .burger {
@@ -720,10 +766,11 @@ button {
 
 }
 
-.map-container {
-  flex-basis: 100%;
-  max-width: 100%;
+.navigation-container {
+  flex-basis: 50%;
+  max-width: 50%;
   height: 300px; /* задаем высоту контейнера карты */
+  padding-right: 20px;
 }
 
 @media (min-width: 768px) {

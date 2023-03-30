@@ -1,6 +1,4 @@
-/*Текст джава скрипта*/
-/*alert("404 Error")*/
-
+/*For all*/
 /*При нажатии на логотим кидает на main*/
 function goToBrainBoostr() {
   window.location.assign('main.html');
@@ -17,7 +15,7 @@ burger.addEventListener("click", () => {
   /*body.classList.toggle("lock");*/
 });
 
-
+/*Main.html*/
 /*services_content_column_button1*/
 function First() 
 {
@@ -50,6 +48,21 @@ function Fourth()
 const btn4 = document.getElementById('btn4');
 btn.addEventListener('click', Fourth);
 
+/*Стрелки перелистывания отзывов*/
+const reviewers = document.querySelector('.reviewers');
+const reviewers_second = document.querySelector('.reviewers_second');
+const arrow_left = document.querySelector('.arrow-left');
+const arrow_right = document.querySelector('.arrow-right');
+
+arrow_right.addEventListener('click', function() {
+  reviewers.style.display = 'none';
+  reviewers_second.style.display = 'flex';
+});
+
+arrow_left.addEventListener('click', function() {
+  reviewers.style.display = 'flex';
+  reviewers_second.style.display = 'none';
+});
 
 /*Яндекс карта*/
 // Создание объекта карты
@@ -81,32 +94,38 @@ ymaps.ready(function () {
 
 
 /*Меню Авторизации*/
-const authorizationLink = document.querySelector('.menu_authorization');
-authorizationLink.addEventListener('click', function(event) {
+const authorization_pageLink = document.querySelector('.menu_authorization');
+authorization_pageLink.addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href = 'Authorization.html';
 });
 
 
 /*Меню личной страницы*/
-const personalLink = document.querySelector('.menu_personal');
+const persona_pagelLink = document.querySelector('.menu_personal');
+persona_pagelLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = 'Personal.html';
+});
+
+
+/*Personal_page.html*/
+const personalLink = document.querySelector('.personal_category');
 personalLink.addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href = 'Personal.html';
 });
 
-/*Стрелки перелистывания отзывов*/
-const reviewers = document.querySelector('.reviewers');
-const reviewers_second = document.querySelector('.reviewers_second');
-const arrow_left = document.querySelector('.arrow-left');
-const arrow_right = document.querySelector('.arrow-right');
-
-arrow_right.addEventListener('click', function() {
-  reviewers.style.display = 'none';
-  reviewers_second.style.display = 'flex';
+/*Messages_page.html*/
+const messagesLink = document.querySelector('.messages_category');
+messagesLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = 'Messages.html';
 });
 
-arrow_left.addEventListener('click', function() {
-  reviewers.style.display = 'flex';
-  reviewers_second.style.display = 'none';
+/*Profile_page.html*/
+const profileLink = document.querySelector('.profile_category');
+profileLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = 'Profile.html';
 });

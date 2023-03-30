@@ -1,6 +1,8 @@
 /*Тело сайта*/
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body.lock {
@@ -836,7 +838,7 @@ button {
 /* Основной стиль футера */
 footer {
   background-color:#b8bc99;
-  padding: 0px 0px 60px;
+  padding: 20px 0px 60px;
   text-align: center;
 }
 

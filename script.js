@@ -3,7 +3,7 @@
 
 /*При нажатии на логотим кидает на main*/
 function goToBrainBoostr() {
-  window.location.assign('index.html');
+  window.location.assign('main.html');
 }
 
 /*бургер*/
@@ -21,7 +21,7 @@ burger.addEventListener("click", () => {
 /*services_content_column_button1*/
 function First() 
 {
-  window.location.assign('First.html');
+  window.location.assign('EGE.html');
 }
 const btn = document.getElementById('btn');
 btn.addEventListener('click', First);
@@ -29,7 +29,7 @@ btn.addEventListener('click', First);
 /*services_content_column_button2*/
 function Second()
 {
-  window.location.assign('Second.html');
+  window.location.assign('OGE.html');
 }
 const btn2 = document.getElementById('btn2');
 btn.addEventListener('click', Second);
@@ -37,7 +37,7 @@ btn.addEventListener('click', Second);
 /*services_content_column_button3*/
 function Third()
 {
-  window.location.assign('Third.html');
+  window.location.assign('School.html');
 }
 const btn3 = document.getElementById('btn3');
 btn.addEventListener('click', Third);
@@ -45,17 +45,68 @@ btn.addEventListener('click', Third);
 /*services_content_column_button4*/
 function Fourth()
 {
-  window.location.assign('Fourth.html');
+  window.location.assign('Student.html');
 }
 const btn4 = document.getElementById('btn4');
 btn.addEventListener('click', Fourth);
 
+
 /*Яндекс карта*/
-ymaps.ready(init);
-function init() {
-    var myMap = new ymaps.Map("navigation", {
-        center: [55.76, 37.64], // координаты центра карты
-        zoom: 10 // уровень масштабирования
-    });
-}
-ymaps.ready(init);
+// Создание объекта карты
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('navigation', {
+    center: [55.99445, 92.79765], // Координаты центра карты
+    zoom: 15, // Масштаб карты
+    controls: [] // Убираем стандартные элементы управления
+  });
+
+  // Добавление метки на карту
+  var myPlacemark = new ymaps.Placemark([55.99445, 92.79765], {
+    hintContent: 'ИКИТ', // Хинт метки
+    balloonContent: 'Красноярск' // Балун метки
+  });
+
+  // Добавление метки на карту
+  myMap.geoObjects.add(myPlacemark);
+
+  // Добавление элементов управления на карту
+  myMap.controls.add('zoomControl', {
+    size: 'small',
+    position: {
+      top: 10,
+      left: 10
+    }
+  });
+});
+
+
+/*Меню Авторизации*/
+const authorizationLink = document.querySelector('.menu_authorization');
+authorizationLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = 'Authorization.html';
+});
+
+
+/*Меню личной страницы*/
+const personalLink = document.querySelector('.menu_personal');
+personalLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = 'Personal.html';
+});
+
+/*Стрелки перелистывания отзывов*/
+const reviewers = document.querySelector('.reviewers');
+const reviewers_second = document.querySelector('.reviewers_second');
+const arrow_left = document.querySelector('.arrow-left');
+const arrow_right = document.querySelector('.arrow-right');
+
+arrow_right.addEventListener('click', function() {
+  reviewers.style.display = 'none';
+  reviewers_second.style.display = 'flex';
+});
+
+arrow_left.addEventListener('click', function() {
+  reviewers.style.display = 'flex';
+  reviewers_second.style.display = 'none';
+});

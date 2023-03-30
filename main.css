@@ -62,43 +62,46 @@ header {
   gap: 10px;
 }
 
-.menu_enter {
+.menu_authorization {
   border-radius: 5px;
-  background-color: #b8bc99;
-  color: #424242;
+  background-color: #724321;
+  color: #ffffff;
   cursor: pointer;
 }
 
-.menu_Registration {
+.menu_personal {
   border-radius: 5px;
-  background-color: #b8bc99;
-  color: #424242;
-  cursor: pointer;
-}
-
-.menu_MePage {
-  border-radius: 5px;
-  background-color: #b8bc99;
-  color: #424242;
+  background-color: #724321;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .menu_FindMentor {
   border-radius: 5px;
-  background-color: #b8bc99;
-  color: #424242;
+  background-color: #724321;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .menu_Mentoring {
   border-radius: 5px;
-  background-color: #b8bc99;
-  color: #424242;
+  background-color: #724321;
+  color: #ffffff;
   cursor: pointer;
 }
 
+.menu_exit {
+  border-radius: 5px;
+  background-color: #724321;
+  color: #ffffff;
+  cursor: pointer;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+
 .menu-container a {
-  color: #424242;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   padding: 10px;
@@ -107,7 +110,7 @@ header {
 }
 
 .menu-container a:hover {
-  background-color: #eee;
+  background-color: rgba(114, 73, 33, 0.5);
 }
 
 .burger {
@@ -341,6 +344,11 @@ top: 9px;
   margin: 10px 0;
   cursor: pointer;
   border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.content_column button:hover {
+  background-color: rgba(114, 67, 33, 0.5);
 }
 
 /* Медиазапрос для изменения стиля элементов на экранах шириной меньше 768px */
@@ -361,7 +369,13 @@ button {
   width: 120px;
   height: 40px;
   border: #724321;
+  transition: background-color 0.3s ease-in-out;
 }
+
+.button:hover {
+  background-color: #4b2911(0, 0%, 59%, 0.5);
+}
+
 
 /*КАК ЭТО РАБОТАЕТ*/
 /* Общие стили */
@@ -683,6 +697,13 @@ button {
   color: #424242;
 }
 
+.reviewers_second {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 .reviewer {
   display: flex;
   flex-direction: column;
@@ -722,6 +743,13 @@ button {
     justify-content: center;
     margin-top: 50px;
   }
+
+  .reviewers_second {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
   
   .reviewer {
     width: calc(100% / 3);
@@ -745,6 +773,7 @@ button {
 
 .arrow-left:hover, .arrow-right:hover {
   color: #ccc;
+  transition: color 0.3s ease-in-out;
 }
 
 
@@ -888,9 +917,11 @@ footer {
   }
 }
 
-/*Первая страница*/
+/*Доп страницы страница*/
 .Garbage h1{
   font-size: 42px;
   text-align: center;
   color: #424242;
+  padding: 100px;
 }
+

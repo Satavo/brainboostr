@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>BrainBoostr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=e472d9e-5853-4e13-9a74-16bfc39acbfc&lang=ru_RU" type="text/javascript"></script>
 </head>
 
@@ -14,16 +14,17 @@
         <div onclick="goToBrainBoostr()" class="logo">
           <img src="img/Logo3.0_withoutground.png" alt="Logo">
         </div>
+
         <div class="burger">
             <span></span>
         </div>
         <nav class="menu">
           <div class="menu-container">
-            <a href="Enter" class="menu_enter">Войти</a>
-            <a href="Registration" class="menu_Registration">Зарегистрироваться</a>
-            <a href="MePage" class="menu_MePage">Личный кабинет</a>
+            <a href="Authorization" class="menu_authorization">Авторизироваться</a>
+            <a href="personal" class="menu_personal">Личный кабинет</a>
             <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
             <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
+            <a href="Exit" class="menu_exit">Выйти</a>
           </div>
         </nav>
     </header>
@@ -196,31 +197,48 @@
 
 
     <div class="reviews">
-            <div class="reviews_header">
-              <h2>Отзывы наших клиентов</h2>
-            </div>
-            <div class="reviewers">
-              <div class="reviewer">
-                <p>Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Сдала ЕГЭ на 89 баллов, хотя знания были уровня 7 класса. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!! </p>
-                <img src="img\reviewe.png" alt="Client 1">
-                <h3>Иоанна</h3>
-              </div>
-              <div class="reviewer">
-                <p>Отдала своего сына сюда. Ни чуть не пожалела, пока болели пропустили курс математики 4 касса, все смогли наверстать за пару занятий, быстро, дешево, сердито! Очень благодарна! </p>
-                <img src="img\reviewer2.png" alt="Client 2">
-                <h3>Юлия</h3>
-              </div>
-              <div class="reviewer">
-                <p>Спасибо вам ребята. А особенно Денису Викторовичу. Сдала физику ОГЭ на 96 балов. Боялась учиться дистанционно, а вышло так, что от этого больше пользы. Thank you !!!! </p>
-                <img src="img\reviewer3.png" alt="Client 3">
-                <h3>Виктория</h3>
-              </div>
-            </div>
-          <div class="arrows">
-            <div class="arrow-left">&#10094;</div>
-            <div class="arrow-right">&#10095;</div>
+        <div class="reviews_header">
+          <h2>Отзывы наших клиентов</h2>
+        </div>
+        <div class="reviewers">
+          <div class="reviewer">
+            <p>Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Сдала ЕГЭ на 89 баллов, хотя знания были уровня 7 класса. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!! </p>
+            <img src="img\reviewe.png" alt="Client 1">
+            <h3>Иоанна</h3>
           </div>
+          <div class="reviewer">
+            <p>Отдала своего сына сюда. Ни чуть не пожалела, пока болели пропустили курс математики 4 касса, все смогли наверстать за пару занятий, быстро, дешево, сердито! Очень благодарна! </p>
+            <img src="img\reviewer2.png" alt="Client 2">
+            <h3>Юлия</h3>
+          </div>
+          <div class="reviewer">
+            <p>Спасибо вам ребята. А особенно Денису Викторовичу. Сдала физику ОГЭ на 96 балов. Боялась учиться дистанционно, а вышло так, что от этого больше пользы. Thank you !!!! </p>
+            <img src="img\reviewer3.png" alt="Client 3">
+            <h3>Виктория</h3>
+          </div>
+        </div>
+        <div class="reviewers_second">
+            <div class="reviewer">
+              <p>Тест!!! Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Сдала ЕГЭ на 89 баллов, хотя знания были уровня 7 класса. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!! </p>
+              <img src="img\reviewe.png" alt="Client 1">
+              <h3>Иоанна</h3>
+            </div>
+            <div class="reviewer">
+              <p>Тест!!! Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Сдала ЕГЭ на 89 баллов, хотя знания были уровня 7 класса. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!!</p>
+              <img src="img\reviewer2.png" alt="Client 2">
+              <h3>Юлия</h3>
+            </div>
+            <div class="reviewer">
+              <p>Тест!!! Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Сдала ЕГЭ на 89 баллов, хотя знания были уровня 7 класса. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!!</p>
+              <img src="img\reviewer3.png" alt="Client 3">
+              <h3>Виктория</h3>
+            </div>
+        </div>
+    <div class="arrows">
+        <div class="arrow-left">&#10094;</div>
+        <div class="arrow-right">&#10095;</div>
     </div>
+</div>
 
 
     <div class="contacts">

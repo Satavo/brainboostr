@@ -8,7 +8,6 @@ margin: 0;
 /* Общие стили для header */
 header {
 display: flex;
-position: fixed;
 justify-content: space-between;
 background-color: rgba(150, 150, 150, 0.5);
 align-items: center;
@@ -206,50 +205,169 @@ transform: scale(0);
   }
 }
 
+
+
 /*Основной контент*/
 /*шапка*/
-.personal_page{
-padding: 76px 0px;
-}
-
-.personal_page_categoryes {
-display: flex;
-align-items: center;
-background-color: #b8bc99;
-height: 57px;
-padding: 0 60px;
-max-width: 100%;
-justify-content: flex-start;
-}
-
-.personal_page_category {
-font-size: 1.2rem;
-font-weight: bold;
-text-transform: uppercase;
-cursor: pointer;
-}
-
-.personal_page_categoryes a {
-margin: 0px 20px;
-color: #424242;
-text-decoration: none;
-display: inline-block;
-background-color: #b8bc99;
-font-size: 18px;
-}
-
-.personal_page_categoryes a:hover {
-color: rgba(255, 255, 255, 1);
-}
-
-.personal_page_categoryes a.selected {
-background-color: #fff;
-color: #000;
-}
-
-
+  .categoryes_pages {
+    display: flex;
+    align-items: center;
+    background-color: #b8bc99;
+    height: 57px;
+    padding: 0 60px;
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+    
+    .categoryes_pages {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    }
+  
+    .categoryes_pages a {
+    margin: 0px 20px;
+    color: #424242;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #b8bc99;
+    font-size: 14px;
+    }
+  
+    .categoryes_pages a:hover {
+    color: rgba(255, 255, 255, 1);
+    }
+  
+    .categoryes_pages a.selected {
+    background-color: #fff;
+    color: #000;
+    }
 /*контент*/
+.message_page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /*height: 100%;*/
+  height: 800px;
+  margin: 0px 40px;
+  padding: 80px 0px;
+}
 
+.message_page_contacts {
+  background-color: #e8e8e8;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 25%;
+  height: auto;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+  margin: 0px 20px;
+}
+
+.message_page_contacts h2 {
+  margin: 0;
+  text-align: center;
+  color:#424242
+}
+
+.message_page_contacts .search_button {
+  border: none;
+  background-color: #724321;
+  transition: transform 0.3s ease-out;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.message_page_contacts .search_button:hover {
+	background-color: rgba(114, 73, 33, 0.5);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.message_page_chat {
+  overflow-y: scroll;
+  width: 75%;
+  height: 85%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+  margin: 0px 20px;
+  background-color: #e8e8e8;
+}
+
+.message_page_chat_content {
+  display: flex;
+  flex-direction: row;
+}
+
+.message_page_chat_content_text {
+  width: 75%;
+  background-color: rgba(155, 218, 255, 0.1);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.message_page_chat_content_text h1,h2 {
+  margin: 0;
+  text-align: left;
+  padding: 10px;
+  color:#424242;
+  font-size: 16px;
+}
+
+.message_page_chat_content_img {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 25%;
+  margin: 0;
+  align-items: right;
+  background-color: rgba(155, 218, 255, 0.1);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.message_page_chat_content_img img {
+  display: block;
+  width: 75%;
+}
 
 /* Стили для блока "Подвал" */
 /* Основной стиль футера */

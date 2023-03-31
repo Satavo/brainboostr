@@ -123,9 +123,26 @@ messagesLink.addEventListener('click', function(event) {
   window.location.href = 'Messages.html';
 });
 
+var modal = document.getElementById("contacts-modal");
+var button = document.getElementById("contacts-header");
+var span = document.getElementsByClassName("close")[0];
+button.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 /*Profile_page.html*/
 const profileLink = document.querySelector('.profile_category');
 profileLink.addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href = 'Profile.html';
 });
+
+

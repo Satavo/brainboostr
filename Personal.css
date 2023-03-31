@@ -8,7 +8,6 @@ body {
 /* Общие стили для header */
 header {
 	display: flex;
-	position: fixed;
 	justify-content: space-between;
 	background-color: rgba(150, 150, 150, 0.5);
 	align-items: center;
@@ -208,11 +207,7 @@ header {
 
 /*Основной контент*/
 /*шапка*/
-.personal_page{
-padding: 76px 0px;
-}
-
-.personal_page_categoryes {
+.categoryes_pages {
 	display: flex;
 	align-items: center;
 	background-color: #b8bc99;
@@ -222,27 +217,27 @@ padding: 76px 0px;
 	justify-content: flex-start;
 }
   
-  .personal_page_category {
+  .categoryes_pages {
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
   }
 
-  .personal_page_categoryes a {
+  .categoryes_pages a {
 	margin: 0px 20px;
 	color: #424242;
 	text-decoration: none;
 	display: inline-block;
 	background-color: #b8bc99;
-	font-size: 18px;
+    font-size: 14px;
   }
 
-  .personal_page_categoryes a:hover {
+  .categoryes_pages a:hover {
 	color: rgba(255, 255, 255, 1);
   }
 
-  .personal_page_categoryes a.selected {
+  .categoryes_pages a.selected {
 	background-color: #fff;
 	color: #000;
   }
@@ -252,7 +247,7 @@ padding: 76px 0px;
   .personal_page_content {
 	display: flex;
 	justify-content: space-between;
-	padding: 40px 0px 40px;
+	padding: 80px 0px 200px;
 	margin: 0px 40px;
   }
   

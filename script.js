@@ -15,6 +15,17 @@ burger.addEventListener("click", () => {
   /*body.classList.toggle("lock");*/
 });
 
+/*бургер*/
+const burger2 = document.querySelector(".burger2");
+const menu2 = document.querySelector(".menu2");
+const body2 = document.querySelector("body");
+
+burger2.addEventListener("click", () => {
+  burger2.classList.toggle("active");
+  menu2.classList.toggle("active");
+  /*body.classList.toggle("lock");*/
+});
+
 /*Main.html*/
 /*services_content_column_button1*/
 function First() 
@@ -123,26 +134,10 @@ messagesLink.addEventListener('click', function(event) {
   window.location.href = 'Messages.html';
 });
 
-var modal = document.getElementById("contacts-modal");
-var button = document.getElementById("contacts-header");
-var span = document.getElementsByClassName("close")[0];
-button.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
 /*Profile_page.html*/
 const profileLink = document.querySelector('.profile_category');
 profileLink.addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href = 'Profile.html';
 });
-
 

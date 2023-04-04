@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>PersonalPage</title>
+	<title>Personal_page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="Personal.css">
 	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -14,34 +14,24 @@
 	<div onclick="goToBrainBoostr()" class="logo">
 	  <img src="img/Logo3.0_withoutground.png" alt="Logo">
 	</div>
-	<div class="burger">
-		<span></span>
-	</div>
-	<nav class="menu">
-	  <div class="menu-container">
-		<a href="Authorization.html" class="menu_authorization">Авторизироваться</a>
-		<a href="Personal.html" class="menu_MePage">Личный кабинет</a>
-		<a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
-		<a href="Mentoring" class="menu_Mentoring">Преподавать</a>
-		<a href="Exit" class="menu_exit">Выйти</a>
-	  </div>
-	</nav>
 </header>
 
 
 <body>
-	<div class="categoryes">
-		<div class="categoryes_pages">
+	<div class="Personal">
+		<div class="navigation">
 		  <a href="Personal.html" class="personal_category">Личный кабинет</a>
 		  <a href="Messages.html" class="messages_category">Мои сообщения</a>
 		  <a href="Profile.html" class="profile_category">Мой профиль</a>
 		</div>
-		<div class="personal_page_content">
-		  <div class="personal_page_content_me">
+		<div class="personal_content">
+		  <div class="personal_content_me">
 			<img src="img\Avatar.jpg" alt="Мой аватар">
-			<h2>Иван Иванов</h2>
+			<div class="name">
+				<input id="name" placeholder="Ваше имя">
+			</div>
 		  </div>
-		  <div class="personal_page_content_requests">
+		  <div class="personal_content_requests">
 			<div class="message">
 			<h1>Мои сообщения</h1>
 			</div>
@@ -66,10 +56,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <ul class="footer_menu">
-                        <li><a href="#">Главное</a></li>
-                        <li><a href="#">Специалисты</a></li>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li><a href="main.html">Главное</a></li>
+                        <li><a href="main.html#mentors">Специалисты</a></li>
+                        <li><a href="main.html#info">О компании</a></li>
                     </ul>
                 </div>
             </div>

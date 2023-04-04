@@ -3,31 +3,52 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BrainBoostr/advertising4</title>
+    <title>BrainBoostr_OGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="OGE.css">
 </head>
 
 <body>
-    <header>
-        <div onclick="goToBrainBoostr()" class="logo">
-          <img src="img/Logo3.0_withoutground.png" alt="Logo">
-        </div>
-        <div class="burger">
-            <span></span>
-        </div>
-        <nav class="menu">
-          <div class="menu-container">
-            <a href="#" class="menu-item">Войти</a>
-            <a href="#" class="menu-item">Зарегистрироваться</a>
-            <a href="#" class="menu-item">Найти преподавателя</a>
-            <a href="#" class="menu-item">Преподавать</a>
-          </div>
-        </nav>
-    </header>
+  <header>
+    <div onclick="goToBrainBoostr()" class="logo">
+      <img src="img/Logo3.0_withoutground.png" alt="Logo">
+    </div>
+
+    <div class="burger">
+        <span></span>
+    </div>
+    <nav class="menu">
+      <div class="menu-container">
+        <a href="Authorization.html" class="menu_authorization">Авторизироваться</a>
+        <a href="Personal.html" class="menu_personal">Личный кабинет</a>
+        <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
+        <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
+        <a href="Exit" class="menu_exit">Выйти</a>
+      </div>
+    </nav>
+  </header>
+
     <div class="Garbage">
       <h1>Помощь студентам</h1>
     </div>
+
+    <footer>
+        <div class="footer_container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="footer_menu">
+                      <li><a href="main.html">Главное</a></li>
+                      <li><a href="main.html#mentors">Специалисты</a></li>
+                      <li><a href="main.html#info">О компании</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rools">
+            <p>© 2023 BrainBoostr</p>
+        </div>
+    </footer>
+    <!--Подключаем библиотемку Jquery для лучшей рабоыт JS скрипта-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>

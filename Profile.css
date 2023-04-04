@@ -9,7 +9,7 @@ body {
   header {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(150, 150, 150, 0.5);
+  background-color: #ffffff;
   align-items: center;
   top: 0;
   left: 0;
@@ -31,126 +31,6 @@ body {
   max-height: 76px;
   cursor: pointer;
   z-index: 3;
-  }
-  
-  .menu {
-  display: none;
-  }
-  
-  .menu.active {
-  display: flex;
-  position: absolute;
-  top: 80px;
-  right: 20px;
-  background-color: #ffffff;
-  padding: 10px;
-  border: 1px solid #424242;
-  border-radius: 5px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .menu-container {
-  font-size: 16px;
-  color: #424242;
-  align-items:center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  }
-  
-  .menu_authorization {
-  border-radius: 5px;
-  background-color: #b8bc99;
-  color: #424242;
-  cursor: pointer;
-  }
-  
-  .menu_MePage {
-  border-radius: 5px;
-  background-color: #b8bc99;
-  color: #424242;
-  cursor: pointer;
-  }
-  
-  .menu_FindMentor {
-  border-radius: 5px;
-  background-color: #b8bc99;
-  color: #424242;
-  cursor: pointer;
-  }
-  
-  .menu_Mentoring {
-  border-radius: 5px;
-  background-color: #b8bc99;
-  color: #424242;
-  cursor: pointer;
-  }
-  
-  .menu-container a {
-  color: #424242;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
-  }
-  
-  .menu-container a:hover {
-  background-color: #eee;
-  }
-  
-  .burger {
-  display: block;
-  position: relative;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 3;
-  }
-  
-  .burger:before,
-  .burger:after {
-  content: '';
-  background-color: #000;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  transition: transform 0.3s ease-out;
-  }
-  
-  .burger:before {
-  top: 0px;
-  }
-  
-  .burger:after {
-  bottom: 0px;
-  }
-  
-  .burger span{
-  position: absolute;
-  background-color: #000;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  top: 9px;
-  transition: transform 0.3s ease-out;
-  }
-  
-  .burger.active:before {
-  transform: rotate(45deg);
-  top: 9px;
-  }
-  
-  .burger.active:after {
-  transform: rotate(-45deg);
-  bottom: 9px;
-  }
-  
-  .burger.active span {
-  transform: scale(0);
   }
   
   /* Для экранов шириной от 1920px */
@@ -205,48 +85,313 @@ body {
     }
   }
   
-  /*Основной контент*/
+/*Основной контент*/
 /*шапка*/
-.categoryes_pages {
-  display: flex;
-  align-items: center;
-  background-color: #b8bc99;
-  height: 57px;
-  padding: 0 60px;
-  max-width: 100%;
-  justify-content: flex-start;
-  padding: 20px 0px 0px;
+.navigation {
+	display: flex;
+	align-items: center;
+	background-color: #b8bc99;
+	height: 57px;
+	padding: 0 60px;
+	max-width: 100%;
+	justify-content: flex-start;
 }
-  
-  .categoryes_pages {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
+
+  .navigation a {
+	margin: 0px 20px;
+	color: #424242;
+	text-decoration: none;
+	display: inline-block;
+	background-color: #b8bc99;
+    font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
   }
 
-  .categoryes_pages a {
-  margin: 0px 20px;
-  color: #424242;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #b8bc99;
-  font-size: 14px;
+  .navigation a:hover {
+	color: rgba(255, 255, 255, 1);
   }
 
-  .categoryes_pages a:hover {
-  color: rgba(255, 255, 255, 1);
+  .navigation a.selected {
+	background-color: #fff;
+	color: #000;
   }
-
-  .categoryes_pages a.selected {
-  background-color: #fff;
-  color: #000;
-  }
-  
   
   /*контент*/
+  /*основной блок*/
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0px 40px 0px 40px;
+    padding: 60px 0px 60px;
+  }
   
+  /*левая часть страницы*/
+  .left_part {
+    height: 100%;
+    width: 33%;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 2px 0px rgba(0.25, 0, 0, 0.25);
+    border-radius: 10px;
+  }
   
+  .general_information h1 {
+    font-size: 14px;
+    margin: 0px 0px 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .gender {
+    margin: 0px 0px 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  .name {
+    margin: 0px 0px 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  .surname {
+    margin: 0px 0px 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  .date {
+    margin: 0px 0px 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  .mail {
+    margin: 0px 0px 20px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .gender.span {
+    text-align: center;
+  }
+
+  .gender span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #424242;
+    pointer-events: none;
+  }
+  
+  .gender select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #a9a9a9;
+    background-color: #f7f7f7;
+    color: #424242;
+    width: 50%;
+    text-align: center;
+    font-size: 8px;
+  }
+  
+  .name input,
+  .surname input,
+  .date input,
+  .mail input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #a9a9a9;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #424242;
+    width: 50%;
+  }
+
+  .accept_button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .accept_button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #724321;
+    transition: transform 0.3s ease-out;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .accept_button button:hover {
+    background-color: rgba(114, 73, 33, 0.5);
+  }
+  
+  /*середина страницы*/
+  .middle_part {
+    height: 100%;
+    width: 33%;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 2px 0px rgba(0.25, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  
+  .document {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .document span {
+    font-weight: bold;
+    text-align: center;
+    color: #424242;
+  }
+
+  .file {
+    margin: 30px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+
+  .document_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(180, 180, 180, 0.5);
+    margin: 0px 50px;
+  }
+  
+  .document_img img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .upload_button {
+    margin: 30px 0px 0px;
+    justify-content: center;
+  }
+
+  .upload_button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #724321;
+    transition: transform 0.3s ease-out;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .upload_button button:hover {
+    background-color: rgba(114, 73, 33, 0.5);
+  }
+  
+
+    /*Правая часть страницы*/
+ /* стили для контейнера с правой частью */
+.right_part {
+  height: 100%;
+  width: 33%;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 2px 0px rgba(0.25, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+
+/* стили для контейнера с изображением */
+.avatar {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 20px 0px 0px;
+  padding: 30px 0px 30px;
+}
+
+/* стили для спана с названием */
+.avatar span {
+  font-weight: bold;
+  color: #424242;
+}
+
+/* стили для контейнера с превью изображения */
+.avatar_preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 30px 0px 0px;
+}
+
+.avatar_preview_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 50px;
+}
+
+/* стили для превью изображения */
+.avatar_preview_img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* стили для контейнера с кнопкой смены пароля */
+.change_password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 20px;
+  padding: 30px 0px 30px;
+}
+
+/* стили для спана с названием */
+.change_password span {
+  font-weight: bold;
+}
+
+/* стили для контейнера с кнопкой */
+.change_password_button {
+  margin: 30px 0px 0px;
+}
+
+.change_password_button button{
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #724321;
+  transition: transform 0.3s ease-out;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.change_password_button button:hover {
+  background-color: rgba(114, 73, 33, 0.5);
+}
+
+
   /* Стили для блока "Подвал" */
   /* Основной стиль футера */
   footer {

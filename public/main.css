@@ -170,10 +170,7 @@ top: 9px;
 }
 
 /* Для экранов шириной от 1920px */
-@media screen and (min-width: 1920px) {
-  .burger {
-    display: none;
-  }}
+
   
   /* Для экранов шириной до 768px */
   @media (max-width: 768px) {

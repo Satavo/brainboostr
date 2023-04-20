@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', action: 'App\Http\Controllers\MainController@main');
+Route::get('/main', action: 'App\Http\Controllers\MainController@main');
 
 
 
@@ -25,3 +25,10 @@ Route::get('/', action: 'App\Http\Controllers\MainController@main');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/layout',function(){
+    return view('layout');
+});
+
+Route::get('/Personal',function(){
+    return view('Personal');
+});

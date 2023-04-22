@@ -2,6 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::get('/', action: 'App\Http\Controllers\MainController@main');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::patch('/user/{id}', 'App\Http\Controllers\UserUpdateController@update')->name('user.update')->middleware('auth');

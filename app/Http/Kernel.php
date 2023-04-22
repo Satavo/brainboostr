@@ -23,6 +23,10 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
 
+    protected $routeMiddleware = [
+        // ...
+        'json' => \Illuminate\Http\Middleware\ParseJson::class,
+    ];
     /**
      * The application's route middleware groups.
      *

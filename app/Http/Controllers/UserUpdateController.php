@@ -17,6 +17,7 @@ class UserUpdateController extends Controller
         // Обновляем данные пользователя
         $user->name = $request->name;
         $user->email = $request->email;
+
         $user->save();
     
         // Перенаправляем пользователя на страницу "Личный кабинет"

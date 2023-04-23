@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('main.css') }}">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=e472d9e-5853-4e13-9a74-16bfc39acbfc&lang=ru_RU" type="text/javascript"></script>
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+        
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 
@@ -21,7 +27,7 @@
         </div>
         <nav class="menu">
           <div class="menu-container">
-            <a href="Authorization.html" class="menu_authorization">Авторизироваться</a>
+            <a href="{{ route('login') }}" class="menu_authorization">Авторизироваться</a>
             <a href="Personal.html" class="menu_personal">Личный кабинет</a>
             <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
             <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
@@ -29,7 +35,6 @@
           </div>
         </nav>
     </header>
-
 
     <div class="main">
         <div class="main_content">

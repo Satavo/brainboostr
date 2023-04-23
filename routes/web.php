@@ -17,15 +17,14 @@ use Illuminate\Http\Request;
 
 Route::get('/', action: 'App\Http\Controllers\MainController@main');
 
-
-
-// Route::get('/user/{id}/{name}', function ($id, $name) {
-//     return 'ID: '.$id.'. Name: '.$name;
-// });
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::patch('/user/{id}', 'App\Http\Controllers\UserUpdateController@update')->name('user.update')->middleware('auth');
 
+Route::patch('/users/{user}/update-password', 'App\Http\Controllers\UserUpdateController@updatePassword')
+    ->name('user.update.password')
+    ->middleware('auth');
+
+Route::post('/users/{user}/update-avatar', 'App\Http\Controllers\UserUpdateController@updateAvatar')->name('user.update.avatar');

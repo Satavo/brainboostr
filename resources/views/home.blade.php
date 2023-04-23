@@ -12,7 +12,7 @@
                 <div class="card">
                     @if (Auth::check())
                         <div class="card-body">
-                            <h5 class="card-title">Здравствуй, {{ Auth::user()->name }}!</h5>
+                            <h3 class="card-title">Здравствуй, {{ Auth::user()->name }}!</h5>
                             <p class="card-text">Это ваш личный кабинет</p>
                         </div>
                         <div class="card-body">
@@ -26,12 +26,12 @@
                                 @endif
           
                                 <div class="row mb-3">
-                                    <label for="avatar" class="col-md-4 col-form-label text-md-end">{{ __('Avatar') }}</label>
+                                    <label for="avatar" class="col-md-4 col-form-label text-md-end">{{ __('Аватар') }}</label>
           
                                     <div class="col-md-6">
                                         <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" name="avatar" value="{{ old('avatar') }}" required autocomplete="avatar">
           
-                                        <img src="/avatars/{{ Auth::user()->avatar }}" style="width:80px;margin-top: 10px;">
+                                        <img src="/avatars/{{ Auth::user()->avatar }}" style="width:80px;margin-top: 10px;" alt="avatar">
           
                                         @error('avatar')
                                             <span class="invalid-feedback" role="alert">
@@ -44,7 +44,7 @@
                                 <div class="row mb-0">
                                     <div class="col-md-8 offset-md-4">
                                         <button type="submit" class="btn btn-dark">
-                                            {{ __('Upload Profile') }}
+                                            {{ __('Загрузить в профиль') }}
                                         </button>
                                     </div>
                                 </div>
@@ -160,9 +160,7 @@
     </div>
     @endif
     </div>
-    </div>
-    </div>
-    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

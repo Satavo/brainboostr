@@ -97,7 +97,7 @@ ymaps.ready(function () {
 const authorization_pageLink = document.querySelector('.menu_authorization');
 authorization_pageLink.addEventListener('click', function(event) {
   event.preventDefault();
-  window.location.href = 'Authorization.html';
+  window.location.href = '/login';
 });
 
 

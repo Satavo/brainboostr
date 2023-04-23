@@ -31,14 +31,6 @@ class User extends Authenticatable implements HasMedia {
         'avatar',
     ];
 
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this
-        ->addMediaConversion('thumb')
-        ->fit(Manipulations::FIT_CROP, 300, 300)
-        ->nonQueued();
-    }
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -57,11 +49,5 @@ class User extends Authenticatable implements HasMedia {
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection('avatars');
-
-    }
 }
 

@@ -27,4 +27,4 @@ Route::patch('/users/{user}/update-password', 'App\Http\Controllers\UserUpdateCo
     ->name('user.update.password')
     ->middleware('auth');
 
-Route::post('/users/{user}/update-avatar', 'App\Http\Controllers\UserUpdateController@updateAvatar')->name('user.update.avatar');
+Route::post('/home', [App\Http\Controllers\UserUpdateController::class, 'store'])->name('user.update.store');

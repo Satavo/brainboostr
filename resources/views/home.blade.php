@@ -15,21 +15,41 @@
                             <h5 class="card-title">Здравствуй, {{ Auth::user()->name }}!</h5>
                             <p class="card-text">Это ваш личный кабинет</p>
                         </div>
-                        <div class="container mt-5">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="text-center">
-                                        <img src="{{ Auth::user()->avatar_url }}" class="rounded-circle" alt="avatar">
-                                        <h6>Upload a different photo...</h6>
-                                        <form action="{{ route('user.update.avatar', Auth::id()) }}" method="POST" enctype="multipart/form-data">
-                                            @csrf
-                                            <div class="form-group">
-                                                <input type="file" class="form-control-file" name="avatar">
-                                            </div>
-                                            <button type="submit" class="btn btn-primary btn-sm">Upload</button>
-                                        </form>
+                        <div class="card-body">
+                            <form method="POST" action="{{ route('user.update.store') }}" enctype="multipart/form-data">
+                                @csrf
+          
+                                @if (session('success'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+          
+                                <div class="row mb-3">
+                                    <label for="avatar" class="col-md-4 col-form-label text-md-end">{{ __('Avatar') }}</label>
+          
+                                    <div class="col-md-6">
+                                        <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" name="avatar" value="{{ old('avatar') }}" required autocomplete="avatar">
+          
+                                        <img src="/avatars/{{ Auth::user()->avatar }}" style="width:80px;margin-top: 10px;">
+          
+                                        @error('avatar')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
+          
+                                <div class="row mb-0">
+                                    <div class="col-md-8 offset-md-4">
+                                        <button type="submit" class="btn btn-dark">
+                                            {{ __('Upload Profile') }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                         <form method="POST" action="{{ route('user.update', Auth::id()) }}">
                             @method('PATCH')
                             @csrf

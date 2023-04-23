@@ -37,35 +37,21 @@ class UserUpdateController extends Controller
         // Перенаправляем пользователя на страницу "Личный кабинет"
         return redirect('/home')->with('success', 'Данные пользователя успешно обновлены');
     }
-    public function updateAvatar(Request $request, User $user)
+    public function store(Request $request)
     {
-    // Проверяем, авторизован ли текущий пользователь и имеет ли он право обновлять аватары
-    $this->authorize('update', $user);
-
-    // Проверяем, загружен ли файл
-    if (!$request->hasFile('avatar')) {
-        return redirect()->back()->with('error', 'Необходимо выбрать файл для загрузки!');
+        $request->validate([
+            'avatar' => 'required|image',
+        ]);
+  
+        $avatarName = time().'.'.$request->avatar->getClientOriginalExtension();
+        $request->avatar->move(public_path('avatars'), $avatarName);
+  
+        Auth()->user()->update(['avatar'=>$avatarName]);
+  
+        return back()->with('success', 'Avatar updated successfully.');
     }
-
-    // Получаем файл аватара
-    $file = $request->file('avatar');
-
-    // Проверяем, является ли файл изображением
-    if (!$file->isValid() || !in_array($file->getClientOriginalExtension(), ['jpg', 'jpeg', 'png'])) {
-        return redirect()->back()->with('error', 'Допустимые форматы изображений: JPG, JPEG, PNG.');
-    }
-
-    // Генерируем имя файла
-    $filename = uniqid() . '.' . $file->getClientOriginalExtension();
-
-    // Сохраняем файл в директории storage/app/public/avatars
-    $file->storeAs('public/avatars', $filename);
-
-    // Обновляем имя аватара в базе данных
-    $user->avatar = $filename;
-    $user->save();
-
-    // Возвращаем ответ с сообщением об успешной загрузке
-    return redirect()->back()->with('success', 'Аватар успешно загружен!');
+    public function index()
+    {
+        return view('home');
     }
 }

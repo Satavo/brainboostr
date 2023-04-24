@@ -55,8 +55,12 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    @if (Auth::user()->avatar)
                                     <img src="/avatars/{{ Auth::user()->avatar }}" style="width: 40px; border-radius: 20%">
                                     {{ Auth::user()->name }}
+                                    @else
+                                    <img src="/images/Avatar.jpg" style="width:40px;">
+                                    @endif
                                 </a>
     
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

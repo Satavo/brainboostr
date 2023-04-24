@@ -14,9 +14,11 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Image\Manipulations;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use App\Http\Middleware\TrustHosts;
 
 class User extends Authenticatable implements HasMedia {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles, InteractsWithMedia;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles, InteractsWithMedia, CanResetPassword;
     /**
      * The attributes that are mass assignable.
      *

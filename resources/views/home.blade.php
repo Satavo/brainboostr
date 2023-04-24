@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('style')
-@endsection
 @section('title')
     Личный кабинет
 @endsection
@@ -30,9 +28,11 @@
           
                                     <div class="col-md-6">
                                         <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" name="avatar" value="{{ old('avatar') }}" required autocomplete="avatar">
-          
+                                        @if (Auth::user()->avatar)    
                                         <img src="/avatars/{{ Auth::user()->avatar }}" style="width:80px;margin-top: 10px;" alt="avatar">
-          
+                                        @else
+                                        <img src="images\Avatar.jpg" style="width:80px;margin-top: 10px;">
+                                        @endif
                                         @error('avatar')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>

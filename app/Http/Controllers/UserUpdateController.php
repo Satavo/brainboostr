@@ -35,7 +35,7 @@ class UserUpdateController extends Controller
         $user->save();
     
         // Перенаправляем пользователя на страницу "Личный кабинет"
-        return redirect('/home')->with('success', 'Данные пользователя успешно обновлены');
+        return back()->with('success', 'Данные пользователя успешно обновлены');
     }
     public function store(Request $request)
     {
@@ -48,7 +48,7 @@ class UserUpdateController extends Controller
   
         Auth()->user()->update(['avatar'=>$avatarName]);
   
-        return back()->with('success', 'Avatar updated successfully.');
+        return back()->with('success', 'Аватар изменен успешно.');
     }
     public function index()
     {

@@ -26,7 +26,7 @@
         <nav class="menu">
           <div class="menu-container">
             <a href="{{ route('login') }}" class="menu_authorization">Авторизироваться</a>
-            <a href="Personal.html" class="menu_personal">Личный кабинет</a>
+            <a href="Personal" class="menu_personal">Личный кабинет</a>
             <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
             <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
             <a href="Exit" class="menu_exit">Выйти</a>
@@ -116,7 +116,7 @@
     </div>
 
 
-    <div class="mentors">
+    <div class="mentors" id="mentors">
         <div class="mentors_content">
             <h2>Наша команда</h2>
             <p>Лучший преподавательский состав в одном месте. Выбирай, учись, успешно сдавай!</p>
@@ -147,7 +147,7 @@
     </div>
 
 
-    <div class="about">
+    <div class="about" id="about">
         <div class="question">
             <h2>Почему мы?</h2>
         </div>
@@ -223,19 +223,19 @@
         </div>
         <div class="reviewers_second">
             <div class="reviewer">
-              <p>Тест!!! Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Сдала ЕГЭ на 89 баллов, хотя знания были уровня 7 класса. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!! </p>
-              <img src="images\reviewe.png" alt="Client 1">
-              <h3>Иоанна</h3>
+              <p>Отличный сайт по поиску репетиторов, простой интерфейс, удобный поиск и высокое качество предоставляемых услуг. Рекомендую!</p>
+              <img src="images\reviewer4.png" alt="Client 1">
+              <h3>Алекандр</h3>
             </div>
             <div class="reviewer">
-              <p>Тест!!! Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Сдала ЕГЭ на 89 баллов, хотя знания были уровня 7 класса. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!!</p>
-              <img src="images\reviewer2.png" alt="Client 2">
-              <h3>Юлия</h3>
+              <p>Отличный сайт - помощник в обучении! Удобный интерфейс, широкий выбор преподавателей, легкий и быстрый поиск. Рекомендую!</p>
+              <img src="images\reviewer5.png" alt="Client 2">
+              <h3>Андрей</h3>
             </div>
             <div class="reviewer">
-              <p>Тест!!! Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Сдала ЕГЭ на 89 баллов, хотя знания были уровня 7 класса. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!!</p>
-              <img src="images\reviewer3.png" alt="Client 3">
-              <h3>Виктория</h3>
+              <p>"Brainboostr - удобный сайт для обучения. Полезный контент, понятный интерфейс и эффективные методы обучения."</p>
+              <img src="images\reviewer6.png" alt="Client 3">
+              <h3>Кирилл</h3>
             </div>
         </div>
     <div class="arrows">
@@ -260,10 +260,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <ul class="footer_menu">
-                        <li><a href="#">Главное</a></li>
-                        <li><a href="#">Специалисты</a></li>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li><a href="/">Главное</a></li>
+                        <li><a href="/#mentors">Специалисты</a></li>
+                        <li><a href="/#about">О компании</a></li>
                     </ul>
                 </div>
             </div>

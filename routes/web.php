@@ -9,22 +9,26 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Auth\Events\PasswordReset;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
 Route::get('/', action: 'App\Http\Controllers\MainController@main');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+/*Для перехода на лк*/
+Route::get('/personal', function () {
+    return view('personal');
+});
+
+Route::get('/messages', function () {
+    return view('messages');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
 
 Route::patch('/user/{id}', 'App\Http\Controllers\UserUpdateController@update')->name('user.update')->middleware('auth');
 

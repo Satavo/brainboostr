@@ -66,36 +66,26 @@ header {
 
 .menu_authorization {
   border-radius: 5px;
-  background-color: #724321;
-  color: #ffffff;
   cursor: pointer;
 }
 
 .menu_personal {
   border-radius: 5px;
-  background-color: #724321;
-  color: #ffffff;
   cursor: pointer;
 }
 
 .menu_FindMentor {
   border-radius: 5px;
-  background-color: #724321;
-  color: #ffffff;
   cursor: pointer;
 }
 
 .menu_Mentoring {
   border-radius: 5px;
-  background-color: #724321;
-  color: #ffffff;
   cursor: pointer;
 }
 
 .menu_exit {
   border-radius: 5px;
-  background-color: #724321;
-  color: #ffffff;
   cursor: pointer;
   width: 50%;
   height: 50%;
@@ -103,7 +93,7 @@ header {
 }
 
 .menu-container a {
-  color: #ffffff;
+  color: #424242;
   text-decoration: none;
   font-size: 18px;
   padding: 10px;
@@ -112,7 +102,7 @@ header {
 }
 
 .menu-container a:hover {
-  background-color: rgba(114, 73, 33, 0.5);
+  background-color: rgba(73, 73, 73, 0.5);
 }
 
 .burger {

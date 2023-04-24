@@ -1,7 +1,7 @@
 /*For all*/
 /*При нажатии на логотим кидает на main*/
 function goToBrainBoostr() {
-  window.location.assign('main.html');
+  window.location.assign('/');
 }
 
 /*бургер*/
@@ -105,7 +105,7 @@ authorization_pageLink.addEventListener('click', function(event) {
 const persona_pagelLink = document.querySelector('.menu_personal');
 persona_pagelLink.addEventListener('click', function(event) {
   event.preventDefault();
-  window.location.href = 'Personal.html';
+  window.location.href = '/personal';
 });
 
 
@@ -113,14 +113,14 @@ persona_pagelLink.addEventListener('click', function(event) {
 const personalLink = document.querySelector('.personal_category');
 personalLink.addEventListener('click', function(event) {
   event.preventDefault();
-  window.location.href = 'Personal.html';
+  window.location.href = '/personal';
 });
 
 /*Messages_page.html*/
 const messagesLink = document.querySelector('.messages_category');
 messagesLink.addEventListener('click', function(event) {
   event.preventDefault();
-  window.location.href = 'Messages.html';
+  window.location.href = '/messages';
 });
 
 var modal = document.getElementById("contacts-modal");

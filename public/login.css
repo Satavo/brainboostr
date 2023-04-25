@@ -1,0 +1,14 @@
+.mt-128{
+  margin-top: 8rem!important;
+  margin-bottom: 8rem;
+  padding: 0!important;
+}
+
+.box {
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+}
+
+.back {
+  background: linear-gradient(to bottom, #b8bc99, #ffffff, #b8bc99);
+}

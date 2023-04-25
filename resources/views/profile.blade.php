@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>PersonalPage</title>
+	<title>Profile</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="Profile.css">
 	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -19,8 +19,8 @@
 	</div>
 	<nav class="menu">
 	  <div class="menu-container">
-		<a href="Authorization.html" class="menu_authorization">Авторизироваться</a>
-		<a href="Personal.html" class="menu_personal">Личный кабинет</a>
+		<a href="login" class="menu_authorization">Авторизироваться</a>
+		<a href="personal" class="menu_personal">Личный кабинет</a>
 		<a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
 		<a href="Mentoring" class="menu_Mentoring">Преподавать</a>
 		<a href="Exit" class="menu_exit">Выйти</a>

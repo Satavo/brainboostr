@@ -19,7 +19,7 @@ burger.addEventListener("click", () => {
 /*services_content_column_button1*/
 function First() 
 {
-  window.location.assign('EGE.html');
+  window.location.assign('/EGE');
 }
 const btn = document.getElementById('btn');
 btn.addEventListener('click', First);
@@ -27,7 +27,7 @@ btn.addEventListener('click', First);
 /*services_content_column_button2*/
 function Second()
 {
-  window.location.assign('OGE.html');
+  window.location.assign('/OGE');
 }
 const btn2 = document.getElementById('btn2');
 btn.addEventListener('click', Second);
@@ -35,7 +35,7 @@ btn.addEventListener('click', Second);
 /*services_content_column_button3*/
 function Third()
 {
-  window.location.assign('School.html');
+  window.location.assign('/School');
 }
 const btn3 = document.getElementById('btn3');
 btn.addEventListener('click', Third);
@@ -43,7 +43,7 @@ btn.addEventListener('click', Third);
 /*services_content_column_button4*/
 function Fourth()
 {
-  window.location.assign('Student.html');
+  window.location.assign('/Student');
 }
 const btn4 = document.getElementById('btn4');
 btn.addEventListener('click', Fourth);
@@ -109,14 +109,14 @@ persona_pagelLink.addEventListener('click', function(event) {
 });
 
 
-/*Personal_page.html*/
+/*Personal_page*/
 const personalLink = document.querySelector('.personal_category');
 personalLink.addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href = '/personal';
 });
 
-/*Messages_page.html*/
+/*Messages_page*/
 const messagesLink = document.querySelector('.messages_category');
 messagesLink.addEventListener('click', function(event) {
   event.preventDefault();
@@ -138,7 +138,7 @@ window.onclick = function(event) {
   }
 }
 
-/*Profile_page.html*/
+/*Profile_page*/
 const profileLink = document.querySelector('.profile_category');
 profileLink.addEventListener('click', function(event) {
   event.preventDefault();

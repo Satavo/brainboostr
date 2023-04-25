@@ -1,6 +1,12 @@
-.mt-128{
+.mt-8r{
   margin-top: 8rem!important;
   margin-bottom: 8rem;
+  padding: 0!important;
+}
+
+.mt-4r{
+  margin-top: 4rem!important;
+  margin-bottom: 4rem;
   padding: 0!important;
 }
 

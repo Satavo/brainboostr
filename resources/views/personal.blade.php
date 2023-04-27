@@ -56,7 +56,9 @@
 					<span>Нет запросов на занятия</span>
 				</div>
 				<div class="request_button">
-					<button>Найти преподавателя</button>
+					<button>
+						<a href="/#services">Найти преподавателя</a>
+					</button>
 				</div>
 			</div>
 		  </div>

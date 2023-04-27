@@ -401,6 +401,11 @@ header {
 		background-color: rgba(114, 73, 33, 0.5);
 	  }
 
+	.request_button a{
+		text-decoration: none;
+		color: #ffffff;
+	}
+
 	@media screen and (max-width: 768px) {
 		.personal_page_categoryes {
 			flex-direction: column;

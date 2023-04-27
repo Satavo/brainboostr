@@ -26,7 +26,7 @@
         <nav class="menu">
           <div class="menu-container">
             <a href="{{ route('login') }}" class="menu_authorization">Авторизироваться</a>
-            <a href="Personal" class="menu_personal">Личный кабинет</a>
+            <a href="personal" class="menu_personal">Личный кабинет</a>
             <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
             <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
             <a href="Exit" class="menu_exit">Выйти</a>
@@ -43,7 +43,7 @@
     </div>
 
 
-    <div class="services">
+    <div class="services" id="services">
         <div class="content">
             <div class="content_container">
                 <div class="content_column">
@@ -123,22 +123,22 @@
         </div>
         <div class="mentors_info">
             <div class="mentor">
-                <img src="images/Mentor1.png" alt="Mentor1">
+                <img src="images/Mentor1.png" alt="Mentor1" style="width: 200px; height: 200px">
                 <h2>Мария Викторовна</h2>
                 <p>Преподаватель Географии. Подготовка к ЕГЭ</p>
             </div>
             <div class="mentor">
-                <img src="images/Mentor2.png" alt="Mentor2">
+                <img src="images/Mentor2.png" alt="Mentor2" style="width: 200px; height: 200px">
                 <h2>Денис Викторович</h2>
                 <p>Преподаватель Физики. Подготовка к ОГЭ</p>
             </div>
             <div class="mentor">
-                <img src="images/Mentor3.png" alt="Mentor3">
+                <img src="images/Mentor3.png" alt="Mentor3" style="width: 200px; height: 200px">
                 <h2>Виктория Ивановна</h2>
                 <p>Преподаватель математики. 4-9 класс</p>
             </div>
             <div class="mentor">
-                <img src="images/Mentor4.png" alt="Mentor4">
+                <img src="images/Mentor4.png" alt="Mentor4" style="width: 200px; height: 200px">
                 <h2>Наталья Сергеевна</h2>
                 <p>Преподаватель истории. Подготовка к ОГЭ</p>
             </div>
@@ -206,35 +206,35 @@
         </div>
         <div class="reviewers">
           <div class="reviewer">
-            <p>Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Сдала ЕГЭ на 89 баллов, хотя знания были уровня 7 класса. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!! </p>
-            <img src="images/reviewe.png" alt="Client 1">
+            <p>Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!! </p>
+            <img src="images/reviewe.png" alt="Client 1" style="width: 200px; height: 200px">
             <h3>Иоанна</h3>
           </div>
           <div class="reviewer">
             <p>Отдала своего сына сюда. Ни чуть не пожалела, пока болели пропустили курс математики 4 касса, все смогли наверстать за пару занятий, быстро, дешево, сердито! Очень благодарна! </p>
-            <img src="images\reviewer2.png" alt="Client 2">
+            <img src="images\reviewer2.png" alt="Client 2" style="width: 200px; height: 200px">
             <h3>Юлия</h3>
           </div>
           <div class="reviewer">
             <p>Спасибо вам ребята. А особенно Денису Викторовичу. Сдала физику ОГЭ на 96 балов. Боялась учиться дистанционно, а вышло так, что от этого больше пользы. Thank you !!!! </p>
-            <img src="images\reviewer3.png" alt="Client 3">
+            <img src="images\reviewer3.png" alt="Client 3" style="width: 200px; height: 200px">
             <h3>Виктория</h3>
           </div>
         </div>
         <div class="reviewers_second">
             <div class="reviewer">
               <p>Отличный сайт по поиску репетиторов, простой интерфейс, удобный поиск и высокое качество предоставляемых услуг. Рекомендую!</p>
-              <img src="images\reviewer4.png" alt="Client 1">
+              <img src="images\reviewer4.png" alt="Client 1" style="width: 200px; height: 200px">
               <h3>Алекандр</h3>
             </div>
             <div class="reviewer">
               <p>Отличный сайт - помощник в обучении! Удобный интерфейс, широкий выбор преподавателей, легкий и быстрый поиск. Рекомендую!</p>
-              <img src="images\reviewer5.png" alt="Client 2">
+              <img src="images\reviewer5.png" alt="Client 2" style="width: 200px; height: 200px">
               <h3>Андрей</h3>
             </div>
             <div class="reviewer">
-              <p>"Brainboostr - удобный сайт для обучения. Полезный контент, понятный интерфейс и эффективные методы обучения."</p>
-              <img src="images\reviewer6.png" alt="Client 3">
+              <p>"Brainboostr - удобный сайт для обучения. Полезный контент, понятный интерфейс и эффективные методы обучения. Проблем не возникло</p>
+              <img src="images\reviewer6.png" alt="Client 3" style="width: 200px; height: 200px">
               <h3>Кирилл</h3>
             </div>
         </div>
@@ -248,8 +248,8 @@
     <div class="contacts">
         <div class="contact-info">
           <h2>Контактная информация</h2>
-          <p>улица Лесопарковая, 33, Красноярск, Россия;</p>
-          <p>+1 22 234 564</p>
+          <p>​Академика Киренского, 26;</p>
+          <p>+7(965)916-96-78</p>
           <p><a href="mailto:BrainBoostr@gmail.com">BrainBoostr@gmail.com</a></p>
         </div>
         <div id="navigation" class="navigation-container" style="width: 100%; height: 500px"></div>

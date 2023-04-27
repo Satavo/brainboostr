@@ -48,6 +48,17 @@ function Fourth()
 const btn4 = document.getElementById('btn4');
 btn.addEventListener('click', Fourth);
 
+/*Personal.blade.php to main
+function Five()
+{
+  window.location.assign('/');
+  const servicesSection = document.getElementById('services');
+  servicesSection.scrollIntoView({ behavior: 'smooth' });
+}
+const btn5 = document.getElementById('btn5');
+btn.addEventListener('click', Five);*/
+
+
 /*Стрелки перелистывания отзывов*/
 const reviewers = document.querySelector('.reviewers');
 const reviewers_second = document.querySelector('.reviewers_second');
@@ -142,7 +153,7 @@ window.onclick = function(event) {
 const profileLink = document.querySelector('.profile_category');
 profileLink.addEventListener('click', function(event) {
   event.preventDefault();
-  window.location.href = 'Profile.html';
+  window.location.href = 'profile.html';
 });
 
 

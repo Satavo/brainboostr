@@ -6,32 +6,55 @@
     <title>Главная страница</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('main.css') }}">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=e472d9e-5853-4e13-9a74-16bfc39acbfc&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e472d9e-5853-4e13-9a74-16bfc39acbfc&lang=ru_RU"
+        type="text/javascript"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-        
+
 </head>
 
 
 <body>
     <header>
         <div onclick="goToBrainBoostr()" class="logo">
-          <img src="images/Logo3.0_withoutground.png" alt="Logo">
+            <img src="images/Logo3.0_withoutground.png" alt="Logo">
         </div>
 
-        <div class="burger">
-            <span></span>
-        </div>
-        <nav class="menu">
-          <div class="menu-container">
-            <a href="{{ route('login') }}" class="menu_authorization">Авторизироваться</a>
-            <a href="personal" class="menu_personal">Личный кабинет</a>
-            <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
-            <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
-            <a href="Exit" class="menu_exit">Выйти</a>
-          </div>
-        </nav>
+        <!--If guest-->
+        @guest
+            @if (Route::has('login') or ('register'))
+                <nav class="authorization">
+                    <div class="authorization_container">
+                        <a href="{{ route('login') }}" class="menu_authorization">Авторизироваться</a>
+                    </div>
+                </nav>
+            @endif
+
+        @else
+            <div class="burger">
+                <span></span>
+            </div>
+            <nav class="menu">
+                <div class="menu-container">
+                    <a href="personal" class="menu_personal">Личный кабинет</a>
+                    <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
+                    <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Выход') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        @endguest
+
     </header>
 
     <div class="main">
@@ -202,55 +225,61 @@
 
     <div class="reviews">
         <div class="reviews_header">
-          <h2>Отзывы наших клиентов</h2>
+            <h2>Отзывы наших клиентов</h2>
         </div>
         <div class="reviewers">
-          <div class="reviewer">
-            <p>Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Подготовили быстро и в очень приятной обстановке. Спасибо вам !!!!! </p>
-            <img src="images/reviewe.png" alt="Client 1" style="width: 200px; height: 200px">
-            <h3>Иоанна</h3>
-          </div>
-          <div class="reviewer">
-            <p>Отдала своего сына сюда. Ни чуть не пожалела, пока болели пропустили курс математики 4 касса, все смогли наверстать за пару занятий, быстро, дешево, сердито! Очень благодарна! </p>
-            <img src="images\reviewer2.png" alt="Client 2" style="width: 200px; height: 200px">
-            <h3>Юлия</h3>
-          </div>
-          <div class="reviewer">
-            <p>Спасибо вам ребята. А особенно Денису Викторовичу. Сдала физику ОГЭ на 96 балов. Боялась учиться дистанционно, а вышло так, что от этого больше пользы. Thank you !!!! </p>
-            <img src="images\reviewer3.png" alt="Client 3" style="width: 200px; height: 200px">
-            <h3>Виктория</h3>
-          </div>
+            <div class="reviewer">
+                <p>Готовилась с помощью платформы 'BrainBoostr'. Прекрасные вы, лучшие преподаватели. Подготовили быстро
+                    и в очень приятной обстановке. Спасибо вам !!!!! </p>
+                <img src="images/reviewe.png" alt="Client 1" style="width: 200px; height: 200px">
+                <h3>Иоанна</h3>
+            </div>
+            <div class="reviewer">
+                <p>Отдала своего сына сюда. Ни чуть не пожалела, пока болели пропустили курс математики 4 касса, все
+                    смогли наверстать за пару занятий, быстро, дешево, сердито! Очень благодарна! </p>
+                <img src="images\reviewer2.png" alt="Client 2" style="width: 200px; height: 200px">
+                <h3>Юлия</h3>
+            </div>
+            <div class="reviewer">
+                <p>Спасибо вам ребята. А особенно Денису Викторовичу. Сдала физику ОГЭ на 96 балов. Боялась учиться
+                    дистанционно, а вышло так, что от этого больше пользы. Thank you !!!! </p>
+                <img src="images\reviewer3.png" alt="Client 3" style="width: 200px; height: 200px">
+                <h3>Виктория</h3>
+            </div>
         </div>
         <div class="reviewers_second">
             <div class="reviewer">
-              <p>Отличный сайт по поиску репетиторов, простой интерфейс, удобный поиск и высокое качество предоставляемых услуг. Рекомендую!</p>
-              <img src="images\reviewer4.png" alt="Client 1" style="width: 200px; height: 200px">
-              <h3>Алекандр</h3>
+                <p>Отличный сайт по поиску репетиторов, простой интерфейс, удобный поиск и высокое качество
+                    предоставляемых услуг. Рекомендую!</p>
+                <img src="images\reviewer4.png" alt="Client 1" style="width: 200px; height: 200px">
+                <h3>Алекандр</h3>
             </div>
             <div class="reviewer">
-              <p>Отличный сайт - помощник в обучении! Удобный интерфейс, широкий выбор преподавателей, легкий и быстрый поиск. Рекомендую!</p>
-              <img src="images\reviewer5.png" alt="Client 2" style="width: 200px; height: 200px">
-              <h3>Андрей</h3>
+                <p>Отличный сайт - помощник в обучении! Удобный интерфейс, широкий выбор преподавателей, легкий и
+                    быстрый поиск. Рекомендую!</p>
+                <img src="images\reviewer5.png" alt="Client 2" style="width: 200px; height: 200px">
+                <h3>Андрей</h3>
             </div>
             <div class="reviewer">
-              <p>"Brainboostr - удобный сайт для обучения. Полезный контент, понятный интерфейс и эффективные методы обучения. Проблем не возникло</p>
-              <img src="images\reviewer6.png" alt="Client 3" style="width: 200px; height: 200px">
-              <h3>Кирилл</h3>
+                <p>"Brainboostr - удобный сайт для обучения. Полезный контент, понятный интерфейс и эффективные методы
+                    обучения. Проблем не возникло</p>
+                <img src="images\reviewer6.png" alt="Client 3" style="width: 200px; height: 200px">
+                <h3>Кирилл</h3>
             </div>
         </div>
-    <div class="arrows">
-        <div class="arrow-left">&#10094;</div>
-        <div class="arrow-right">&#10095;</div>
+        <div class="arrows">
+            <div class="arrow-left">&#10094;</div>
+            <div class="arrow-right">&#10095;</div>
+        </div>
     </div>
-</div>
 
 
     <div class="contacts">
         <div class="contact-info">
-          <h2>Контактная информация</h2>
-          <p>​Академика Киренского, 26;</p>
-          <p>+7(965)916-96-78</p>
-          <p><a href="mailto:BrainBoostr@gmail.com">BrainBoostr@gmail.com</a></p>
+            <h2>Контактная информация</h2>
+            <p>​Академика Киренского, 26;</p>
+            <p>+7(965)916-96-78</p>
+            <p><a href="mailto:BrainBoostr@gmail.com">BrainBoostr@gmail.com</a></p>
         </div>
         <div id="navigation" class="navigation-container" style="width: 100%; height: 500px"></div>
     </div>

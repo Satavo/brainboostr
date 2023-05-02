@@ -84,14 +84,6 @@ header {
   cursor: pointer;
 }
 
-.menu_exit {
-  border-radius: 5px;
-  cursor: pointer;
-  width: 50%;
-  height: 50%;
-  text-align: center;
-}
-
 .menu-container a {
   color: #424242;
   text-decoration: none;
@@ -105,6 +97,19 @@ header {
   background-color: rgba(73, 73, 73, 0.5);
 }
 
+/*реализация кнопки авторизоватсья*/
+.authorization_container a{
+  color: #424242;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.authorization_container a:hover{
+  transition: background-color 0.3s ease-in-out;
+  color: rgba(255, 255, 255, 0.5)
+}
+
+/*реализация бургера*/
 .burger {
   display: block;
   position: relative;

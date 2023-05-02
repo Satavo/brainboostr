@@ -38,8 +38,12 @@
             <nav class="menu">
                 <div class="menu-container">
                     <a href="personal" class="menu_personal">Личный кабинет</a>
-                    <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
-                    <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
+                    @if(auth()->user()->role === 'teacher')
+                        <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
+                    @endif
+                    @if(auth()->user()->role === 'student')
+                        <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
+                    @endif
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();

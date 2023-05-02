@@ -34,7 +34,7 @@
 		<div class="navigation">
 		  <a href="personal" class="personal_category">Личный кабинет</a>
 		  <a href="messages" class="messages_category">Мои сообщения</a>
-		  <a href="profile" class="profile_category">Мой профиль</a>
+		  <a href="home" class="profile_category">Мой профиль</a>
 		</div>
 
 	<div class="profile">

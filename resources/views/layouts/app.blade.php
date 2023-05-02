@@ -17,7 +17,7 @@
                     background: rgba(150, 150, 150, 0.5);
                 }
                 body {
-                    background-color: #b8bc99;
+                    background: linear-gradient(to bottom, #b8bc99, #ffffff, #b8bc99);
                 }
             </style>
     </head>
@@ -82,9 +82,33 @@
             </div>
         </nav>
 
+        <div class="Profile">
+            <div class="navigation">
+              <a href="personal" class="personal_category">Личный кабинет</a>
+              <a href="messages" class="messages_category">Мои сообщения</a>
+              <a href="home" class="profile_category">Мой профиль</a>
+        </div>
+
         <main class="py-4 back">
             @yield('content')
         </main>
+
+        <footer>
+			<div class="footer_container">
+				<div class="row">
+					<div class="col-md-4">
+						<ul class="footer_menu">
+							<li><a href="/">Главное</a></li>
+							<li><a href="/#mentors">Специалисты</a></li>
+							<li><a href="/#about">О компании</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="rools">
+				<p>© 2023 BrainBoostr</p>
+			</div>
+		</footer>
     </div>
 </body>
 </html>

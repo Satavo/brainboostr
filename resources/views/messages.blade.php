@@ -98,9 +98,16 @@
 			<div class="message_page_chat">
 				<div class="message_page_chat_content">
 					<div class="message_page_chat_content_text">
+                        @if(auth()->user()->role === 'student')
 						<h1>У вас пока нет сообщений</h1>
 						<h2>Мы заметили, что вы пока не нашли преподавателя.
 							 Ничего страшного! Рекомендуем вам ознакомиться с нашей системой поиска.</h2>
+                        @endif
+                        @if(auth()->user()->role === 'teacher')
+                        <h1>У вас пока нет сообщений</h1>
+						<h2>Мы заметили, что вы пока не нашли ученика.
+							 Ничего страшного! Рекомендуем вам ознакомиться с нашей системой поиска.</h2>
+                        @endif
 					</div>
 					<div class="message_page_chat_content_img">
 						<img src="images\chat_img.png" alt="non-working">

@@ -82,3 +82,7 @@ Route::post('/reset-password', function (Request $request) {
                 ? redirect()->route('login')->with('status', __($status))
                 : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
+
+Route::get('/courses', 'App\Http\Controllers\CourseController@index');
+Route::get('/courses/create', function() { return view ('courses.create'); });
+Route::post('/courses/add', 'App\Http\Controllers\CourseController@addCourse');

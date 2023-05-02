@@ -91,10 +91,13 @@
 
 		<div class="personal_content">
 			<div class="personal_content_me">
-			  <img src="images\Avatar.jpg" alt="Мой аватар">
-			  <div class="name">
-				  <input id="name" placeholder="Ваше имя">
-			  </div>
+                <div class="personal_content_me_images">
+                    @if (Auth::user()->avatar)
+                        <img src="/avatars/{{ Auth::user()->avatar }}" style="border-radius: 10px; max-width: 100%; height: auto;">
+                    @else
+                        <img src="/images/Avatar.jpg" style="border-radius: 10px; max-width: 100%; height: auto;">
+                    @endif
+                </div>
 			</div>
 			<div class="personal_content_requests">
 			  <div class="message">

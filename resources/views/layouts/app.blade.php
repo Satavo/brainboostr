@@ -83,10 +83,12 @@
         </nav>
 
         <div class="Profile">
+            @if(auth()->user())
             <div class="navigation">
               <a href="personal" class="personal_category">Личный кабинет</a>
               <a href="messages" class="messages_category">Мои сообщения</a>
               <a href="home" class="profile_category">Мой профиль</a>
+            @endif
         </div>
 
         <main class="py-4 back">

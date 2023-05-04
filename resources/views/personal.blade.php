@@ -107,13 +107,22 @@
 				  <div class="reques_img">
 					  <img src="images\paper.png" alt="Газета">
 				  </div>
+                  @if(auth()->user()->role === 'student')
 				  <div class="request_text">
-					  <span>Нет запросов на занятия</span>
+					  <span>Нет текущих курсов</span>
 				  </div>
+                  @endif
+                  @if(auth()->user()->role === 'teacher')
+                  <div class="request_text">
+                    <span>Нет запросов на занятия</span>
+                  </div>
+                  @endif
 				  <div class="request_button">
+                    @if(auth()->user()->role === 'student')
 					  <button>
 						  <a href="/#services">Найти преподавателя</a>
 					  </button>
+                    @endif
 				  </div>
 			  </div>
 			</div>

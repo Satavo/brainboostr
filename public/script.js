@@ -16,10 +16,18 @@ burger.addEventListener("click", () => {
 });
 
 /*Main.html*/
+/*if guest*/
+function Guest() 
+{
+  window.location.assign('/login');
+}
+const btnguest = document.getElementById('btnguest');
+btn.addEventListener('click', Guest);
+
 /*services_content_column_button1*/
 function First() 
 {
-  window.location.assign('/EGE');
+  window.location.assign('/courses');
 }
 const btn = document.getElementById('btn');
 btn.addEventListener('click', First);
@@ -27,7 +35,7 @@ btn.addEventListener('click', First);
 /*services_content_column_button2*/
 function Second()
 {
-  window.location.assign('/OGE');
+  window.location.assign('/courses');
 }
 const btn2 = document.getElementById('btn2');
 btn.addEventListener('click', Second);
@@ -35,7 +43,7 @@ btn.addEventListener('click', Second);
 /*services_content_column_button3*/
 function Third()
 {
-  window.location.assign('/School');
+  window.location.assign('/courses');
 }
 const btn3 = document.getElementById('btn3');
 btn.addEventListener('click', Third);
@@ -43,7 +51,7 @@ btn.addEventListener('click', Third);
 /*services_content_column_button4*/
 function Fourth()
 {
-  window.location.assign('/Student');
+  window.location.assign('/courses');
 }
 const btn4 = document.getElementById('btn4');
 btn.addEventListener('click', Fourth);

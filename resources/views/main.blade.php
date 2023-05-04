@@ -37,10 +37,10 @@
                 <div class="menu-container">
                     <a href="personal" class="menu_personal">Личный кабинет</a>
                     @if(auth()->user()->role === 'teacher')
-                        <a href="Mentoring" class="menu_Mentoring">Преподавать</a>
+                        <a href="courses/create" class="menu_Mentoring">Преподавать</a>
                     @endif
                     @if(auth()->user()->role === 'student')
-                        <a href="FindMentor" class="menu_FindMentor">Найти преподавателя</a>
+                        <a href="/#services" class="menu_FindMentor">Найти преподавателя</a>
                     @endif
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
@@ -79,7 +79,13 @@
                         по ЕГЭ. У вас есть возможность
                         выбрать время, стоимость и даже
                         заменить специалиста.</p>
-                    <button onclick="First()" id="btn">Подробнее</button>
+                    @guest
+                        @if (Route::has('login') or ('register'))
+                            <button onclick="Guest()" id="btnguest">Подробнее</button>
+                        @endif
+                        @else
+                        <button onclick="First()" id="btn">Подробнее</button>
+                    @endguest
                 </div>
                 <div class="content_column">
                     <img src="images/2.png" alt="Картинка 2">
@@ -89,7 +95,13 @@
                         по ОГЭ. У вас есть возможность
                         выбрать время, стоимость и даже
                         заменить специалиста.</p>
-                    <button onclick="Second()" id="btn2">Подробнее</button>
+                    @guest
+                        @if (Route::has('login') or ('register'))
+                        <button onclick="Guest()" id="btnguest">Подробнее</button>
+                        @endif
+                        @else
+                        <button onclick="Second()" id="btn2">Подробнее</button>
+                    @endguest
                 </div>
                 <div class="content_column">
                     <img src="images/3.png" alt="Картинка 3">
@@ -102,7 +114,13 @@
                         возможность выбрать время,
                         стоимость и даже заменить
                         специалиста.</p>
-                    <button onclick="Third()" id="btn3">Подробнее</button>
+                    @guest
+                        @if (Route::has('login') or ('register'))
+                        <button onclick="Guest()" id="btnguest">Подробнее</button>
+                        @endif
+                        @else
+                        <button onclick="Third()" id="btn3">Подробнее</button>
+                    @endguest
                 </div>
                 <div class="content_column">
                     <img src="images/4 stack.jpg" alt="Картинка 4">
@@ -113,7 +131,13 @@
                         Здесь вы сможете получить помощь как
                         в написании курсовой рабоыт, так и к
                         подготовке к дипломной работе</p>
-                    <button onclick="Fourth()" id="btn4">Подробнее</button>
+                    @guest
+                        @if (Route::has('login') or ('register'))
+                        <button onclick="Guest()" id="btnguest">Подробнее</button>
+                        @endif
+                        @else
+                        <button onclick="Fourth()" id="btn4">Подробнее</button>
+                    @endguest
                 </div>
             </div>
         </div>

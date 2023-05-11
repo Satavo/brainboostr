@@ -70,6 +70,13 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Выход') }}
                                     </a>
+                                    <a href="personal" class="menu_personal">Личный кабинет</a>
+                                    @if(auth()->user()->role === 'teacher')
+                                        <a href="courses/create" class="menu_Mentoring">Преподавать</a>
+                                    @endif
+                                    @if(auth()->user()->role === 'student')
+                                        <a href="/#services" class="menu_FindMentor">Найти преподавателя</a>
+                                    @endif
     
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -94,23 +101,6 @@
         <main class="py-4 back">
             @yield('content')
         </main>
-
-        <footer>
-			<div class="footer_container">
-				<div class="row">
-					<div class="col-md-4">
-						<ul class="footer_menu">
-							<li><a href="/">Главное</a></li>
-							<li><a href="/#mentors">Специалисты</a></li>
-							<li><a href="/#about">О компании</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="rools">
-				<p>© 2023 BrainBoostr</p>
-			</div>
-		</footer>
     </div>
 </body>
 </html>

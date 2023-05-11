@@ -99,23 +99,6 @@
 			</div>
 		</div>
 	</div>
-
-    <footer>
-        <div class="footer_container">
-            <div class="row">
-                <div class="col-md-4">
-                    <ul class="footer_menu">
-                        <li><a href="/">Главное</a></li>
-                        <li><a href="/#mentors">Специалисты</a></li>
-                        <li><a href="/#about">О компании</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="rools">
-            <p>© 2023 BrainBoostr</p>
-        </div>
-    </footer>
     <!--Подключаем библиотемку Jquery для лучшей рабоыт JS скрипта-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>

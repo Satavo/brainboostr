@@ -5,57 +5,85 @@
     <meta charset="UTF-8">
     <title>Главная страница</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('main.css') }}">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=e472d9e-5853-4e13-9a74-16bfc39acbfc&lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
+    <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+        <!-- Scripts -->
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e472d9e-5853-4e13-9a74-16bfc39acbfc&lang=ru_RU" type="text/javascript"></script>
 
 </head>
 
 
 <body>
     <header>
-        <div onclick="goToBrainBoostr()" class="logo">
-            <img src="images/Logo3.0_withoutground.png" alt="Logo">
-        </div>
-
-        <!--If guest-->
-        @guest
-            @if (Route::has('login') or ('register'))
-                <nav class="authorization">
-                    <div class="authorization_container">
-                        <a href="{{ route('login') }}" class="menu_authorization">Авторизироваться</a>
-                    </div>
-                </nav>
-            @endif
-
-        @else
-            <div class="burger">
-                <span></span>
-            </div>
-            <nav class="menu">
-                <div class="menu-container">
-                    <a href="personal" class="menu_personal">Личный кабинет</a>
-                    @if(auth()->user()->role === 'teacher')
-                        <a href="courses/create" class="menu_Mentoring">Преподавать</a>
-                    @endif
-                    @if(auth()->user()->role === 'student')
-                        <a href="/#services" class="menu_FindMentor">Найти преподавателя</a>
-                    @endif
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Выход') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <img src="{{ asset('images/Logo3.0_withoutground.png') }}" alt="Logo" width="150" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav me-auto">
+    
+                    </ul>
+    
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Войти') }}</a>
+                                </li>
+                            @endif
+    
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Зарегистрироваться') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    @if (Auth::user()->avatar)
+                                    <img src="/avatars/{{ Auth::user()->avatar }}" style="width: 40px; border-radius: 20%">
+                                    {{ Auth::user()->name }}
+                                    @else
+                                    <img src="/images/Avatar.jpg" style="width:40px;">
+                                    @endif
+                                </a>
+    
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a href="personal" class="menu_personal">Личный кабинет</a>
+                                    @if(auth()->user()->role === 'teacher')
+                                        <a href="courses/create" class="menu_Mentoring">Преподавать</a>
+                                    @endif
+                                    @if(auth()->user()->role === 'student')
+                                        <a href="/#services" class="menu_FindMentor">Найти преподавателя</a>
+                                    @endif
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Выход') }}
+                                    </a>
+    
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
                 </div>
-            </nav>
-        @endguest
+            </div>
+        </nav>
 
     </header>
 
@@ -312,7 +340,7 @@
 
     <footer>
         <div class="footer_container">
-            <div class="row">
+            <div class="footer_container_row">
                 <div class="col-md-4">
                     <ul class="footer_menu">
                         <li><a href="/">Главное</a></li>

@@ -4,15 +4,48 @@ function goToBrainBoostr() {
   window.location.assign('/');
 }
 
-/*бургер*/
-const burger = document.querySelector(".burger");
-const menu = document.querySelector(".menu");
-const body = document.querySelector("body");
+/*Стрелки перелистывания отзывов*/
+const reviewers = document.querySelector('.reviewers');
+const reviewers_second = document.querySelector('.reviewers_second');
+const arrow_left = document.querySelector('.arrow-left');
+const arrow_right = document.querySelector('.arrow-right');
 
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  menu.classList.toggle("active");
-  /*body.classList.toggle("lock");*/
+arrow_right.addEventListener('click', function() {
+  reviewers.style.display = 'none';
+  reviewers_second.style.display = 'flex';
+});
+
+arrow_left.addEventListener('click', function() {
+  reviewers.style.display = 'flex';
+  reviewers_second.style.display = 'none';
+});
+
+/*Яндекс карта*/
+// Создание объекта карты
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('navigation', {
+    center: [55.99445, 92.79765], // Координаты центра карты
+    zoom: 15, // Масштаб карты
+    controls: [] // Убираем стандартные элементы управления
+  });
+
+  // Добавление метки на карту
+  var myPlacemark = new ymaps.Placemark([55.99445, 92.79765], {
+    hintContent: 'ИКИТ', // Хинт метки
+    balloonContent: 'Красноярск' // Балун метки
+  });
+
+  // Добавление метки на карту
+  myMap.geoObjects.add(myPlacemark);
+
+  // Добавление элементов управления на карту
+  myMap.controls.add('zoomControl', {
+    size: 'small',
+    position: {
+      top: 10,
+      left: 10
+    }
+  });
 });
 
 /*Main.html*/
@@ -65,52 +98,6 @@ function Five()
 }
 const btn5 = document.getElementById('btn5');
 btn.addEventListener('click', Five);*/
-
-
-/*Стрелки перелистывания отзывов*/
-const reviewers = document.querySelector('.reviewers');
-const reviewers_second = document.querySelector('.reviewers_second');
-const arrow_left = document.querySelector('.arrow-left');
-const arrow_right = document.querySelector('.arrow-right');
-
-arrow_right.addEventListener('click', function() {
-  reviewers.style.display = 'none';
-  reviewers_second.style.display = 'flex';
-});
-
-arrow_left.addEventListener('click', function() {
-  reviewers.style.display = 'flex';
-  reviewers_second.style.display = 'none';
-});
-
-/*Яндекс карта*/
-// Создание объекта карты
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('navigation', {
-    center: [55.99445, 92.79765], // Координаты центра карты
-    zoom: 15, // Масштаб карты
-    controls: [] // Убираем стандартные элементы управления
-  });
-
-  // Добавление метки на карту
-  var myPlacemark = new ymaps.Placemark([55.99445, 92.79765], {
-    hintContent: 'ИКИТ', // Хинт метки
-    balloonContent: 'Красноярск' // Балун метки
-  });
-
-  // Добавление метки на карту
-  myMap.geoObjects.add(myPlacemark);
-
-  // Добавление элементов управления на карту
-  myMap.controls.add('zoomControl', {
-    size: 'small',
-    position: {
-      top: 10,
-      left: 10
-    }
-  });
-});
-
 
 /*Меню Авторизации*/
 const authorization_pageLink = document.querySelector('.menu_authorization');

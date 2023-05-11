@@ -65,11 +65,6 @@
                                 </a>
     
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Выход') }}
-                                    </a>
                                     <a href="personal" class="menu_personal">Личный кабинет</a>
                                     @if(auth()->user()->role === 'teacher')
                                         <a href="courses/create" class="menu_Mentoring">Преподавать</a>
@@ -77,6 +72,11 @@
                                     @if(auth()->user()->role === 'student')
                                         <a href="/#services" class="menu_FindMentor">Найти преподавателя</a>
                                     @endif
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Выход') }}
+                                    </a>
     
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf

@@ -29,6 +29,10 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+Route::get('/courses/create', function () {
+    return view('create');
+});
+
 
 Route::patch('/user/{id}', 'App\Http\Controllers\UserUpdateController@update')->name('user.update')->middleware('auth');
 

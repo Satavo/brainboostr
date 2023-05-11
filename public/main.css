@@ -12,7 +12,6 @@ overflow: hidden;
 /*ШАПКА САЙТА*/
 /* Общие стили для header */
 header {
-  display: flex;
   position: fixed;
   justify-content: space-between;
   background-color: rgba(150, 150, 150, 0.5);
@@ -20,200 +19,55 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0px 84px;
   z-index: 2;
 }
 
-.logo{
-  max-width: 250px;
-  max-height: 76px;
-  cursor: pointer;
-  z-index: 3;
+.navbar {
+  height: 6rem!important;
 }
 
-.logo img {
-  width: 100%;
-  max-width: 250px;
-  max-height: 76px;
-  cursor: pointer;
-  z-index: 3;
-}
-
-.menu {
-  display: none;
-}
-
-.menu.active {
-  display: flex;
-  position: absolute;
-  top: 80px;
-  right: 20px;
-  background-color: #ffffff;
-  padding: 10px;
-  border: 1px solid #424242;
-  border-radius: 5px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.menu-container {
-  font-size: 16px;
-  color: #424242;
-  align-items:center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.menu_authorization {
-  border-radius: 5px;
-  cursor: pointer;
-}
-
+/*для бургера*/
 .menu_personal {
-  border-radius: 5px;
-  cursor: pointer;
-}
-
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
+  color: #424242;
+  }
+  
 .menu_FindMentor {
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.menu_Mentoring {
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.menu-container a {
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
   color: #424242;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
-}
+  }
 
-.menu-container a:hover {
-  background-color: rgba(73, 73, 73, 0.5);
-}
-
-/*реализация кнопки авторизоватсья*/
-.authorization_container a{
+  .dropdown-item {
+	border-radius: 5px;
+	cursor: pointer;
   color: #424242;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.authorization_container a:hover{
-  transition: background-color 0.3s ease-in-out;
-  color: rgba(255, 255, 255, 0.5)
-}
-
-/*реализация бургера*/
-.burger {
-  display: block;
-  position: relative;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 3;
-}
-
-.burger:before,
-.burger:after {
-content: '';
-background-color: #000;
-position: absolute;
-width: 100%;
-height: 2px;
-transition: transform 0.3s ease-out;
-}
-
-.burger:before {
-  top: 0px;
-}
-
-.burger:after {
-  bottom: 0px;
-}
-
-.burger span{
-  position: absolute;
-  background-color: #000;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  top: 9px;
-  transition: transform 0.3s ease-out;
-}
-
-.burger.active:before {
-transform: rotate(45deg);
-top: 9px;
-}
-
-.burger.active:after {
-  transform: rotate(-45deg);
-  bottom: 9px;
-}
-
-.burger.active span {
-  transform: scale(0);
-}
-
-/* Для экранов шириной от 1920px */
-
-  
-  /* Для экранов шириной до 768px */
-  @media (max-width: 768px) {
-    /* Убираем padding у header */
-    header {
-      padding: 0px 40px;
-    }
-  
-    /* Уменьшаем высоту логотипа */
-    .logo img {
-      max-height: 40px;
-    }
-  
-    /* Уменьшаем размер и отступы у пунктов меню */
-    .menu a {
-      font-size: 14px;
-      padding: 5px 10px;
-    }
-  }
-  
-  /* Для экранов шириной от 768px до 1024px */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    /* Уменьшаем высоту логотипа */
-    .logo img {
-      max-height: 60px;
-    }
-  
-    /* Уменьшаем размер и отступы у пунктов меню */
-    .menu a {
-      font-size: 14px;
-      padding: 5px 10px;
-    }
-  }
-  
-  /* Для экранов шириной от 1024px */
-  @media (min-width: 1024px) {
-    /* Возвращаем исходные размеры у логотипа и бургера */
-    .logo img {
-      max-width: 250px;
-      max-height: 76px;
-    }
-  
-    .burger {
-      height: 20px;
-    }
   }
 
+  .dropdown-menu.dropdown-menu-end.show {
+    font-size: 16px;
+    color: #424242;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    align-items:normal;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .dropdown-menu.dropdown-menu-end.show a {
+	color: #424242;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease-in-out;
+  }
+
+  .dropdown-menu.dropdown-menu-end.show a:hover {
+	background-color: rgba(73, 73, 73, 0.5);
+  }
+  
 /*ОСНОВНАЯ ЧАСТЬ САЙТА*/
 .main {
   padding-top: 210px;
@@ -846,12 +700,11 @@ footer {
 }
 
 .footer_container {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.row {
+.footer_container_row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -886,7 +739,7 @@ footer {
   color: #424242;
 }
 
-.row a {
+.footer_container_row a {
   color:#424242;
 }
 

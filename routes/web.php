@@ -88,5 +88,5 @@ Route::post('/reset-password', function (Request $request) {
 })->middleware('guest')->name('password.update');
 
 Route::get('/courses', 'App\Http\Controllers\CourseController@index');
-Route::get('/courses/create', function() { return view ('courses.create'); });
-Route::post('/courses/add', 'App\Http\Controllers\CourseController@addCourse');
+Route::get('/courses/create', function() { return view ('courses.coursecreate'); });
+Route::post('/courses', 'App\Http\Controllers\CourseController@create');

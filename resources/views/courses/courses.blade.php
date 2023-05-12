@@ -53,22 +53,35 @@ h3.card-author {
     margin-bottom: 0;
 }
 </style>
-<form action="{{ route('courses.search') }}" method="GET">
-    <input type="text" name="search" placeholder="Поиск курсов">
-    <button type="submit">Найти</button>
-</form>
-        <div class="card-container">
-            @foreach ($courses as $course)
-                <div class="card">
-                    <div class="card-image" style="background-image: url('{{ asset('images/' . $course->image) }}')">
-                    </div>
-                    <div class="card-content">
-                        <h2 class="card-title">{{ $course->title }}</h2>
-                        <h3 class="card-author">{{ $course->author }}</h3>
-                        <p class="card-description">{{ $course->description }}</p>
-                        <h4 class="card-price">{{ $course->price }}</h4>
-                    </div>
+<div style="display: flex; justify-content: center; margin-bottom: 20px;">
+    <form action="{{ route('courses.search') }}" method="GET" style="width: 50%;">
+        <input type="text" name="search" placeholder="Поиск курсов" style="width: 100%; padding: 10px; font-size: 1.2em;">
+        <button type="submit" style="width: 100%; padding: 10px; font-size: 1.2em;">Найти</button>
+    </form>
+</div>
+
+<div class="card-container">
+    <?php $found = false; ?>
+    @foreach ($courses as $course)
+        @if (strpos(strtolower($course->title), strtolower($search)) !== false)
+            <?php $found = true; ?>
+            <div class="card">
+                <div class="card-image" style="background-image: url('{{ asset('images/' . $course->image) }}')">
                 </div>
-            @endforeach
+                <div class="card-content">
+                    <h2 class="card-title">{{ $course->title }}</h2>
+                    <h3 class="card-author">{{ $course->author }}</h3>
+                    <p class="card-description">{{ $course->description }}</p>
+                    <h4 class="card-price">{{ $course->price }}</h4>
+                </div>
+            </div>
+        @endif
+    @endforeach
+    @if (!$found)
+        <div class="no-results">
+            <p>Ничего не найдено.</p>
         </div>
+    @endif
+</div>
+
 @endsection

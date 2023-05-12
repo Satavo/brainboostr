@@ -15,11 +15,12 @@ class Course extends Model
         'price',
         'description',
         'author',
+        'user_id',
         'image',
     ];
     
     public function author()
     {
-        return $this->belongsTo(User::class, 'author_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

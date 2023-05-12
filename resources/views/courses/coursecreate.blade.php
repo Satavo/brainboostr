@@ -22,9 +22,10 @@
             <textarea name="description" id="description" class="form-control" rows="4" required></textarea>
           </div>
           <div class="form-group">
-            <label for="author">Author</label>
+            <label for="author">Name</label>
             <input type="text" name="author" id="author" class="form-control" required>
           </div>
+          <input type="hidden" name="user_id" value="{{ auth()->user()->name }}">
           <div class="form-group">
             <label for="image">Image</label>
             <input type="file" name="image" id="image" class="form-control-file" required>

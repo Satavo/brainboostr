@@ -90,3 +90,4 @@ Route::post('/reset-password', function (Request $request) {
 Route::get('/courses', 'App\Http\Controllers\CourseController@index');
 Route::get('/courses/create', function() { return view ('courses.coursecreate'); });
 Route::post('/courses', 'App\Http\Controllers\CourseController@create');
+Route::get('/courses/search', 'App\Http\Controllers\CourseController@index')->name('courses.search');

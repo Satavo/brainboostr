@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Личный кабинет
+    Профиль
 @endsection
 @section('content')
     <div class="container mt-5">

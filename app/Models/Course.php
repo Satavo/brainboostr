@@ -11,11 +11,13 @@ class Course extends Model
     use HasFactory;
 
     protected $fillable = [
+        'subject',
         'title',
-        'price',
         'description',
-        'author',
-        'user_id',
+        'experience',
+        'place',
+        'price',
+        'phone',
         'image',
     ];
     

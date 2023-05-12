@@ -11,11 +11,14 @@ class CourseController extends Controller
     {
         $course = new Course;
 
+        $course->subject = $request->subject;
         $course->title = $request->title;
-        $course->price = $request->price;
         $course->description = $request->description;
-        $course->author = $request->author;
-        $course->user_id = $request->user_id;
+        $course->experience = $request->experience;
+        $course->place = $request->place;
+        $course->price = $request->price;
+        $course->phone = $request->phone;
+
 
         $image = $request->file('image');
         $filename = time() . '.' . $image->getClientOriginalExtension();

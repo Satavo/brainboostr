@@ -17,6 +17,9 @@
                 }
                 body {
                     background: linear-gradient(to bottom, #b8bc99, #ffffff, #b8bc99);
+                    min-height: 100vh;
+                    margin: 0px;
+                    padding: 0px;
                 }
             </style>
     </head>
@@ -69,7 +72,7 @@
                                         <a href="courses/create" class="menu_Mentoring">Преподавать</a>
                                     @endif
                                     @if(auth()->user()->role === 'student')
-                                        <a href="/#services" class="menu_FindMentor">Найти преподавателя</a>
+                                        <a href="/courses" class="menu_FindMentor">Найти преподавателя</a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

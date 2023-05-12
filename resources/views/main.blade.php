@@ -66,7 +66,7 @@
                                         <a href="courses/create" class="menu_Mentoring">Преподавать</a>
                                     @endif
                                     @if(auth()->user()->role === 'student')
-                                        <a href="/#services" class="menu_FindMentor">Найти преподавателя</a>
+                                        <a href="/courses" class="menu_FindMentor">Найти преподавателя</a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

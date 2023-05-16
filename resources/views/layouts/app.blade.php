@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@yield("title")</title>
         <link rel="stylesheet" href="{{ asset('design.css') }}">
+        <script src="{{ asset('js/script.js') }}"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
             <link rel="dns-prefetch" href="//fonts.gstatic.com">
             <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -103,5 +104,7 @@
         <main class="py-4 back">
             @yield('content')
         </main>
-</body>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>

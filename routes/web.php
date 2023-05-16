@@ -21,18 +21,20 @@ Route::get('/personal', function () {
     return view('personal');
 });
 
+/*Для перехода на сообщения*/
 Route::get('/messages', function () {
     return view('messages');
 });
 
+/*Для перехода на профиль*/
 Route::get('/profile', function () {
     return view('profile');
 });
 
+/*Для перехода на создание курса*/
 Route::get('/create', function () {
     return view('create');
 });
-
 
 Route::patch('/user/{id}', 'App\Http\Controllers\UserUpdateController@update')->name('user.update')->middleware('auth');
 
@@ -91,3 +93,5 @@ Route::get('/courses', 'App\Http\Controllers\CourseController@index');
 Route::get('/courses/create', function() { return view ('courses.coursecreate'); }) -> middleware('teachermiddleware');
 Route::post('/courses', 'App\Http\Controllers\CourseController@create');
 Route::get('/courses/search', 'App\Http\Controllers\CourseController@index')->name('courses.search');
+Route::get('/about', 'App\Http\Controllers\AboutController@about');
+Route::get('/about/{card_id}', 'AboutController@showAboutPage');

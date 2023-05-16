@@ -11,6 +11,7 @@ class CourseController extends Controller
     {
         $course = new Course;
 
+        $course->id = $request->id;
         $course->subject = $request->subject;
         $course->title = $request->title;
         $course->description = $request->description;

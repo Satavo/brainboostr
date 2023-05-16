@@ -152,3 +152,6 @@ profileLink.addEventListener('click', function(event) {
 });
 
 
+function redirectToPage() {
+  window.location.href = "about";
+}

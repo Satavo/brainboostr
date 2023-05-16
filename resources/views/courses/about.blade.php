@@ -1,11 +1,9 @@
 @extends ('layouts.app')
 @section ('content')
-    <div class="card">
-        <div class="card-header">
-            {{ $selectedCard->title }}
-        </div>
-        <div class="card-body">
-            <p class="card-text">{{ $selectedCard->description }}</p>
-        </div>
+    <div>
+        <h1>Selected card:</h1>
+        <p>{{ $course->subject }}</p>
+        <p>{{ $course->description }}</p>
+        <p>{{ $course->price }}</p>
     </div>
 @endsection

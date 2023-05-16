@@ -13,8 +13,7 @@ class AboutController extends Controller
     }
 
     public function show($id) {
-        $selectedCard = Course::findOrFail($id); // получаем объект Course из базы данных по id
-        session(['selectedCardId' => $id]); // сохраняем id выбранной карточки в сессию
-        return view('/about', compact('selectedCard')); // передаем объект Card в представление selected_card.blade.php
+        $course = Course::find($id); // получить объект карточки из базы данных
+        return view('about', ['selectedCard' => $course]); // передать переменную $selectedCard в представление about.blade.php
     }
 }

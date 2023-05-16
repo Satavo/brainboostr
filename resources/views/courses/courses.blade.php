@@ -18,6 +18,10 @@
         overflow: hidden;
     }
 
+    .card:hover{
+        background-color: rgba(155, 155, 155, 0.5)!important;
+    }
+
     .card-image {
         height: 200px;
         width: 100%;

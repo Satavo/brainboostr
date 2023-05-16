@@ -58,11 +58,6 @@
         }
     </style>
 
-    <script>
-    function redirectToPage() {
-        window.location.href = "/about";
-    }
-    </script>
 
 <div style="display: flex; justify-content: center; margin-bottom: 20px;">
     <form action="{{ route('courses.search') }}" method="GET" style="width: 50%;">
@@ -76,7 +71,7 @@
     @foreach ($courses as $course)
         @if (strpos(strtolower($course->subject), strtolower($search)) !== false)
             <?php $found = true; ?>
-            <div class="card" onclick="redirectToPage()">
+            <div class="card" onclick="window.location.href='{{ route('courses.show', $course->id) }}'">
                 <div class="card-image" style="background-image: url('{{ asset('images/' . $course->image) }}')"></div>
                 <div class="card-content">
                     <h2 class="card-subject">{{ $course->subject }}</h2>
@@ -90,9 +85,7 @@
             </div>
         @endif
     @endforeach
-
-
-    @if (!$found)
+     @if (!$found)
         <div class="no-results">
             <p>Ничего не найдено.</p>
         </div>

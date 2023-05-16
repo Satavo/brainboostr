@@ -94,3 +94,4 @@ Route::get('/courses/create', function() { return view ('courses.coursecreate');
 Route::post('/courses', 'App\Http\Controllers\CourseController@create');
 Route::get('/courses/search', 'App\Http\Controllers\CourseController@index')->name('courses.search');
 Route::get('/courses/{id}', 'App\Http\Controllers\CourseController@show');
+Route::get('/courses/{course}', 'CourseController@show')->name('courses.show');

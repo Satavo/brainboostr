@@ -93,5 +93,4 @@ Route::get('/courses', 'App\Http\Controllers\CourseController@index');
 Route::get('/courses/create', function() { return view ('courses.coursecreate'); }) -> middleware('teachermiddleware');
 Route::post('/courses', 'App\Http\Controllers\CourseController@create');
 Route::get('/courses/search', 'App\Http\Controllers\CourseController@index')->name('courses.search');
-Route::get('/about', 'App\Http\Controllers\AboutController@about');
-Route::get('/about', 'AboutController@show');
+Route::get('/courses/{id}', 'App\Http\Controllers\CourseController@show');

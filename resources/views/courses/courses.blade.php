@@ -19,7 +19,7 @@
     }
 
     .card:hover{
-        background-color: rgba(255, 255, 255, 0.3)!important;
+        background-color: rgba(255, 255, 255, 0.2)!important;
     }
 
     .card-image {

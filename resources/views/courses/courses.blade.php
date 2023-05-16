@@ -64,7 +64,7 @@
 <div class="card-container">
     <?php $found = false; ?>
     @foreach ($courses as $course)
-        @if (strpos(strtolower($course->title), strtolower($search)) !== false)
+        @if (strpos(strtolower($course->subject), strtolower($search)) !== false)
             <?php $found = true; ?>
             <div class="card">
                 <div class="card-image" style="background-image: url('{{ asset('images/' . $course->image) }}')"></div>

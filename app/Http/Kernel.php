@@ -21,11 +21,13 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+
     ];
 
     protected $routeMiddleware = [
         // ...
         'json' => \Illuminate\Http\Middleware\ParseJson::class,
+        'teachermiddleware' => \App\Http\Middleware\teachermiddleware::class,
     ];
     /**
      * The application's route middleware groups.

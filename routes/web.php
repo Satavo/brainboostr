@@ -88,6 +88,6 @@ Route::post('/reset-password', function (Request $request) {
 })->middleware('guest')->name('password.update');
 
 Route::get('/courses', 'App\Http\Controllers\CourseController@index');
-Route::get('/courses/create', function() { return view ('courses.coursecreate'); });
+Route::get('/courses/create', function() { return view ('courses.coursecreate'); }) -> middleware('teachermiddleware');
 Route::post('/courses', 'App\Http\Controllers\CourseController@create');
 Route::get('/courses/search', 'App\Http\Controllers\CourseController@index')->name('courses.search');

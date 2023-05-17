@@ -17,12 +17,14 @@
 			  <div class="message">
 			  <h1>Мои сообщения</h1>
 			  </div>
+
 			  <div class="request">
 				  <div class="reques_img">
 					  <img src="images\paper.png" alt="Газета">
 				  </div>
                   @if(auth()->user()->role === 'student')
 				  <div class="request_text">
+					  {{ isset($_GET['subject']) ? 'Тема письма: ' . $_GET['subject'] : '' }}
 					  <span>Нет текущих курсов</span>
 				  </div>
                   @endif
@@ -44,6 +46,7 @@
                     @endif
 				  </div>
 			  </div>
+
 			</div>
 		  </div>
 		</div>

@@ -1,11 +1,11 @@
-@extends ('layouts.app')
+@extends ('layouts.appnone')
 @section ('content')
     <style>
     .card-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 30px;
     }
 
     /* Individual card styles */
@@ -16,10 +16,13 @@
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0,0,0,.2);
         overflow: hidden;
+        flex-basis: calc(25% - 20px);
+        word-wrap: break-word; 
     }
 
     .card:hover{
-        background-color: rgba(255, 255, 255, 0.2)!important;
+        background-color: rgb(216, 216, 216)!important;
+        border-color: #000000;
     }
 
     .card-image {
@@ -32,6 +35,12 @@
 
     .card-content {
         padding: 20px;
+    }
+
+    
+    h2.card-subject {
+	    padding: 0px!important;
+        word-wrap: break-word; 
     }
 
     h2.card-title {
@@ -75,8 +84,8 @@
                 <div class="card-image" style="background-image: url('{{ asset('images/' . $course->image) }}')"></div>
                 <div class="card-content">
                     <h2 class="card-subject">{{ $course->subject }}</h2>
-                    <h3 class="card-place">{{ $course->place }}</h3>
-                    <p class="card-experience">{{ $course->experience }}</p>
+                    <h4 class="card-place">{{ $course->place }}</h4>
+                    <p class="card-experience">{{ $course->description }}</p>
                     <div class="price">
                         <h4 class="card-price">{{ $course->price }}</h4>
                         <span>₽/ч<span>

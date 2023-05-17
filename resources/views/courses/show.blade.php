@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appnone')
 @section('content')
 
     <style>
@@ -31,11 +31,18 @@
                             <div class="Tarif">
                                 <p>Тариф:</p>
                                 <p>{{ $course->price }}</p>
+                                <span>₽/ч<span>
                             </div>
                             <div class="subscribe">
-                                <button>
+                                <button id="registerButton" data-subject="Запись на курс">
                                     <a href="/personal">Записаться</a>
                                 </button>
+                                <script>
+                                    document.querySelector('#registerButton').onclick = function() {
+                                      const subject = this.getAttribute('data-subject');
+                                      window.location.href = `/personal?subject=${subject}`;
+                                    };
+                                </script>
                             </div>
                         </div>
                     </div>

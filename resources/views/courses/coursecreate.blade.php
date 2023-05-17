@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appnone')
 @section('title')
     Создать курс
 @endsection
@@ -13,7 +13,7 @@
   
           <div class="form-group">
             <label for="subject">Придмет</label>
-            <input type="text" name="subject" id="subject" class="form-control_custom" rows="1" required placeholder="Название предмета"></input>
+            <input type="text" name="subject" id="subject" class="form-control_custom" rows="1" required placeholder="Название предмета">
           </div>
 
           <div class="form-group">
@@ -33,17 +33,17 @@
 
           <div class="form-group">
             <label for="place">Место проведения</label>
-            <input type="text" name="place" id="place" class="form-control_custom" required placeholder="Место проведения уроков"></input>
+            <input type="text" name="place" id="place" class="form-control_custom" required placeholder="Место проведения уроков">
           </div>
 
           <div class="form-group">
             <label for="price">Стоимость занятия</label>
-            <input type="number" name="price" id="price" class="form-control_custom_price" required placeholder="800₽/ч"></input>
+            <input type="number" name="price" id="price" class="form-control_custom" required placeholder="800₽/ч">
           </div>
 
           <div class="form-group">
             <label for="phone">Укажитеваш контактный номер телефона</label>
-            <input type="number" name="phone" id="phone" class="form-control_custom" required placeholder="89659169678"></input>
+            <input type="number" name="phone" id="phone" class="form-control_custom" required placeholder="89659169678">
           </div>
 
           <input type="hidden" name="user_id" value="{{ auth()->user()->name }}">

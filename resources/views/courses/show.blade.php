@@ -3,7 +3,7 @@
 
     <style>
         .card{
-            padding: 20px!important;
+            padding: 10px!important;
         }
     </style>
 
@@ -33,7 +33,9 @@
                                 <p>{{ $course->price }}</p>
                             </div>
                             <div class="subscribe">
-                                <button>Записаться</button>
+                                <button>
+                                    <a href="/personal">Записаться</a>
+                                </button>
                             </div>
                         </div>
                     </div>

@@ -13,12 +13,12 @@
   
           <div class="form-group">
             <label for="subject">Придмет</label>
-            <input type="text" name="subject" id="subject" class="form-control_custom" required placeholder="Название предмета">
+            <input type="text" name="subject" id="subject" class="form-control_custom" rows="1" required placeholder="Название предмета"></input>
           </div>
 
           <div class="form-group">
             <label for="title">Заголовок</label>
-            <input type="text" name="title" id="title" class="form-control" required placeholder="Я учусь в МИФИ и готов преподавать математику и физику для учеников средней и старшей школы в Москве.">
+            <textarea type="text" name="title" id="title" class="form-control" rows="2" required placeholder="Я учусь в МИФИ и готов преподавать математику и физику для учеников средней и старшей школы в Москве."></textarea>
           </div>
 
           <div class="form-group">
@@ -33,20 +33,17 @@
 
           <div class="form-group">
             <label for="place">Место проведения</label>
-            <input type="text" name="place" id="place" class="form-control_custom" required placeholder="Место проведения уроков">
+            <input type="text" name="place" id="place" class="form-control_custom" required placeholder="Место проведения уроков"></input>
           </div>
 
           <div class="form-group">
             <label for="price">Стоимость занятия</label>
-            <div class="span">
-              <input type="number" name="price" id="price" class="form-control_custom_price" required placeholder="800">
-              <span>₽/ч</span>
-            </div>
+            <input type="number" name="price" id="price" class="form-control_custom_price" required placeholder="800₽/ч"></input>
           </div>
 
           <div class="form-group">
             <label for="phone">Укажитеваш контактный номер телефона</label>
-            <input type="number" name="phone" id="phone" class="form-control_custom" required placeholder="89659169678"> 
+            <input type="number" name="phone" id="phone" class="form-control_custom" required placeholder="89659169678"></input>
           </div>
 
           <input type="hidden" name="user_id" value="{{ auth()->user()->name }}">

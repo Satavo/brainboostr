@@ -34,15 +34,9 @@
                                 <span>₽/ч<span>
                             </div>
                             <div class="subscribe">
-                                <button id="registerButton" data-subject="Запись на курс">
-                                    <a href="/personal">Записаться</a>
+                                <button  onclick="window.location.href='{{ route('personal', $course->id) }}'">
+                                    <a>Записаться</a>
                                 </button>
-                                <script>
-                                    document.querySelector('#registerButton').onclick = function() {
-                                      const subject = this.getAttribute('data-subject');
-                                      window.location.href = `/personal?subject=${subject}`;
-                                    };
-                                </script>
                             </div>
                         </div>
                     </div>

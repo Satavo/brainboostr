@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
+use App\Models\Enrollment;
 
 class CourseController extends Controller
 {
@@ -43,13 +44,49 @@ class CourseController extends Controller
     public function show($id)
     {
         $course = Course::find($id);
+        $user_id = auth()->user()->id;
+        $enrollments = Enrollment::where('course_id', $id)
+                                 ->where('user_id', $user_id)
+                                 ->with('user')
+                                 ->get();
         return view('courses.show', compact('course'));
     }
-
-    public function signup($id)
+    public function userEnrollments()
     {
-        $course = Course::find($id);
-        return view('personal', compact('course'));
+        $user_id = auth()->user()->id;
+        $enrollments = Enrollment::where('user_id', $user_id)
+                                ->with('course')
+                                ->get();
+        
+        return view('personal', compact('enrollments'));
+    }
+    public function enroll($course, Request $request)
+    {
+        // Проверяем, что пользователь авторизован
+        if ($request->user()) {
+            // Проверяем, что пользователь не зарегистрирован на этот курс
+            $enrollment = Enrollment::where('user_id', $request->user()->id)
+                                     ->where('course_id', $course)
+                                     ->first();
+            if ($enrollment) {
+                // Пользователь уже зарегистрирован на этот курс, перенаправляем на страницу курса
+                return redirect()->route('courses.show', ['course' => $course]);
+            } else {
+                // Проводим необходимые проверки и получаем данные из формы
+                $course = Course::find($course);
+                $user_id = $request->user()->id;
+                // Записываем пользователя на курс с указанным id
+                $enrollment = new Enrollment();
+                $enrollment->user_id = $user_id;
+                $enrollment->course_id = $course->id;
+                $enrollment->save();
+                // Редиректим пользователя на страницу курса
+                return redirect()->route('courses.show', ['course' => $course]);
+            }
+        }
+    
+        // Если пользователь не авторизован, то перенаправляем на страницу авторизации
+        return redirect()->route('login');
     }
 }
 

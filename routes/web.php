@@ -95,5 +95,5 @@ Route::post('/courses', 'App\Http\Controllers\CourseController@create');
 Route::get('/courses/search', 'App\Http\Controllers\CourseController@index')->name('courses.search');
 Route::get('/courses/{id}', 'App\Http\Controllers\CourseController@show');
 Route::get('/courses/{course}', 'App\Http\Controllers\CourseController@show')->name('courses.show');
-Route::get('/show/{id}', 'App\Http\Controllers\CourseController@signup');
-Route::get('/show/{course}', 'App\Http\Controllers\CourseController@signup')->name('personal');
+Route::post('/courses/{course}/enroll', 'App\Http\Controllers\CourseController@enroll')->name('enroll');
+Route::get('/personal', 'App\Http\Controllers\CourseController@userEnrollments');

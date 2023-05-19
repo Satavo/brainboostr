@@ -350,6 +350,7 @@ button {
   height: auto;
   border-radius: 50%;
 }
+}
 
 .mentor h2 {
   font-size: 24px;
@@ -357,6 +358,8 @@ button {
   padding: 5px;
   color: #424242;
 }
+
+
 
 .mentor p {
   font-size: 14px;

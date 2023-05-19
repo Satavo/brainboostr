@@ -45,5 +45,11 @@ class CourseController extends Controller
         $course = Course::find($id);
         return view('courses.show', compact('course'));
     }
+
+    public function signup($id)
+    {
+        $course = Course::find($id);
+        return view('personal', compact('course'));
+    }
 }
 

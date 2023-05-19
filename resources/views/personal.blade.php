@@ -25,16 +25,14 @@
                   @if(auth()->user()->role === 'student')
 				  <div class="request_text">
 					  {{ isset($_GET['subject']) ? 'Тема письма: ' . $_GET['subject'] : '' }}
-					  <span>{{ $course->subject }}</span>
+					  <span>Нет текущих курсов</span>
 				  </div>
-
                   @endif
                   @if(auth()->user()->role === 'teacher')
                   <div class="request_text">
                     <span>Нет запросов на занятия</span>
                   </div>
                   @endif
-
 				  <div class="request_button">
                     @if(auth()->user()->role === 'student')
 					  <button>

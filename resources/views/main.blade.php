@@ -331,7 +331,7 @@
     <div class="contacts">
         <div class="contact-info">
             <h2>Контактная информация</h2>
-            <p>​Академика Киренского, 26;</p>
+            <p>​Академика Киренского, 26К1;</p>
             <p>+7(965)916-96-78</p>
             <p><a href="mailto:BrainBoostr@gmail.com">BrainBoostr@gmail.com</a></p>
         </div>
@@ -343,7 +343,7 @@
             <div class="footer_container_row">
                 <div class="col-md-4">
                     <ul class="footer_menu">
-                        <li><a href="/">Главное</a></li>
+                        <li><a href="/#">Главное</a></li>
                         <li><a href="/#mentors">Специалисты</a></li>
                         <li><a href="/#about">О компании</a></li>
                     </ul>

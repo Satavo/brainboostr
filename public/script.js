@@ -150,8 +150,3 @@ profileLink.addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href = 'home';
 });
-
-
-function redirectToPage() {
-  window.location.href = "about";
-}

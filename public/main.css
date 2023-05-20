@@ -745,6 +745,11 @@ footer {
 
 .footer_container_row a {
   color:#424242;
+  text-decoration: none;
+}
+
+.footer_container_row a:hover{
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* Медиа-запросы для адаптивности */

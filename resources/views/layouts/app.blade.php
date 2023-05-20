@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@yield("title")</title>
         <link rel="stylesheet" href="{{ asset('design.css') }}">
-        <script src="{{ asset('js/script.js') }}"></script>
+        <script src="{{ asset('script.js') }}"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
             <link rel="dns-prefetch" href="//fonts.gstatic.com">
             <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -105,6 +105,6 @@
             @yield('content')
         </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="script.js"></script>
+        <script src="{{ asset('script.js') }}"></script>
     </body>
 </html>

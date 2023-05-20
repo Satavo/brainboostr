@@ -5,17 +5,17 @@
 @section('content')
 		<div class="personal_content">
 			<div class="personal_content_me">
-                <div class="personal_content_me_images">
+                <div class="personal_content_me_images" style="width: 200px; height: 200px">
                     @if (Auth::user()->avatar)
-                        <img src="/avatars/{{ Auth::user()->avatar }}" style="border-radius: 10px; max-width: 100%; height: auto;">
+                        <img src="/avatars/{{ Auth::user()->avatar }}">
                     @else
-                        <img src="/images/Avatar.jpg" style="border-radius: 10px; max-width: 100%; height: auto;">
+                        <img src="/images/Avatar.jpg">
                     @endif
                 </div>
 			</div>
 			<div class="personal_content_requests">
 			  <div class="message">
-			  <h1>Мои сообщения</h1>
+			  <h1>Мои курсы</h1>
 			  </div>
 
 			  <div class="request">
@@ -25,15 +25,10 @@
                   @if(auth()->user()->role === 'student')
 				  <div class="request_text">
                     <table>
-                        <thead>
-                            <tr>
-                                <th>Подписанный курс</th>
-                            </tr>
-                        </thead>
                         <tbody>
                         @foreach($enrollments as $enrollment)
                             <tr>
-                                <td>{{ $enrollment->course->subject }}</td>
+                                <td><li>{{ $enrollment->course->subject }}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -45,17 +40,10 @@
                   @if(auth()->user()->role === 'teacher')
                   <div class="request_text">
                     <table>
-                        <thead>
-                            <tr>
-                                <th>Имя пользователя</th>
-                                <th>Подписанный курс</th>
-                            </tr>
-                        </thead>
                         <tbody>
                         @foreach($enrollments as $enrollment)
                             <tr>
-                                <td>{{ $enrollment->user->name }}</td>
-                                <td>{{ $enrollment->course->subject }}</td>
+                                <td><li>{{ $enrollment->course->subject }}</td>
                             </tr>
                         @endforeach
                         </tbody>

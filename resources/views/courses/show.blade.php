@@ -37,13 +37,8 @@
                             @auth
                                 <form method="POST" action="{{ route('enroll', $course->id) }}">
                                     @csrf
-                                    <button id="submitButton" type="submit">Записаться</button>
+                                    <button onclick="window.location.href='{{ route('enroll', $course->id) }}'" type="submit">Записаться</button>
                                 </form>
-                                <script>
-                                    document.getElementById("submitButton").addEventListener("click", function() {
-                                        window.location.href = "personal";
-                                    });
-                                </script>
                             @endauth
                         </div>
                     </div>

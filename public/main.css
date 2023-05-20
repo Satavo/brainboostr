@@ -246,11 +246,19 @@ button {
   max-width: 1960px;
 }
 
+/*Анимация*/
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+}
+
+.row.show{
+opacity: 1;
+transition: all 1.5s;
+transform: translateY(0%);
 }
 
 .howitswork_column {
@@ -350,7 +358,7 @@ button {
   height: auto;
   border-radius: 50%;
 }
-}
+
 
 .mentor h2 {
   font-size: 24px;
@@ -398,6 +406,13 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0px 90px 0px;
+  opacity: 0;
+}
+
+.advantages.show{
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
 }
 
 .column {

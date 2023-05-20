@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -200,7 +200,7 @@
         </div>
         <div class="mentors_info">
             <div class="mentor">
-                <img src="images/Mentor1.png" alt="Mentor1" style="width: 200px; height: 200px">
+                <img class="hidden" src="images/Mentor1.png" alt="Mentor1" style="width: 200px; height: 200px">
                 <h2>Мария Викторовна</h2>
                 <p>Преподаватель Географии. Подготовка к ЕГЭ</p>
             </div>

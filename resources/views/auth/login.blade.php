@@ -10,7 +10,7 @@
                 <div class="card-header">{{ __('Вход') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <div class="enter" method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="row mb-3">
@@ -66,7 +66,7 @@
                                 @endif
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

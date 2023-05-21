@@ -44,6 +44,13 @@
 
 
 /*Дизайн для страниц логина и авторизации*/
+.enter{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+}
+
 .mt-8r{
   margin-top: 8rem!important;
   margin-bottom: 8rem;
@@ -85,7 +92,6 @@
 }
 
 
-
 /*Дизайн для home - профиль*/
 .navigation {
 	display: flex;
@@ -118,6 +124,13 @@
 
   .navigation a:focus, .navigation a:active, .navigation a.active {
 	color: white;
+  }
+
+  .search{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 20px;
   }
 
   .card{
@@ -618,9 +631,6 @@
    .reviews_section{
 	margin-top: 10px;
 	margin-bottom: 10px;
-   }
-
-   form{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

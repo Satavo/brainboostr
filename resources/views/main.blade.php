@@ -94,7 +94,7 @@
                 <h1>Быстро, удобно, <br> квалифицированно.</h1>
             </div>
             <div class="main_content_text _anim-items _anim-no-hide">
-                <p>Удобный интерфейс, высокий уровень специалистов, все что нужно для знаний.</p>
+                <p>Удобный интерфейс, различные каттегории курсов, все что нужно для знаний.</p>
             </div>
         </div>
     </div>
@@ -197,22 +197,22 @@
             <div class="howitswork_column">
                 <img src="images/howitswork1.png" alt="Картинка 1" style="width: 100px; height: 100px">
                 <div class="howitswork_column_content _anim-items">
-                    <h2>Оставь заявку</h2>
-                    <p>Мы зададим несколько вопросов, чтобы<br> подробнее понять суть задачи</p>
+                    <h2>Выберите курс</h2>
+                    <p>Найдите подходящий для себя курс<br> и запишитесь на него</p>
                 </div>
             </div>
             <div class="howitswork_column">
                 <img src="images/howitswork2.png" alt="Картинка 2" style="width: 100px; height: 100px">
                 <div class="howitswork_column_content _anim-items">
                     <h2>Дождись ответа репетитора</h2>
-                    <p>Заказ сам придет к репетитору. Он напишет,<br> если сможет помочь</p>
+                    <p>Уведомление придет к репетитору.<br> Он напишет, если сможет помочь</p>
                 </div>
             </div>
             <div class="howitswork_column">
                 <img src="images/howitswork3.png" alt="Картинка 3" style="width: 100px; height: 100px">
                 <div class="howitswork_column_content _anim-items">
                     <h2>Выбери понравившегося</h2>
-                    <p>О всех деталях и тонкостях договариваетесь в специальном чате</p>
+                    <p>О всех деталях и тонкостях договариваетесь с репетитором</p>
                 </div>
             </div>
         </div>

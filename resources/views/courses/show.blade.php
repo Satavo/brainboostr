@@ -59,19 +59,17 @@
                     <div class="reviews_title">
                         <h1>Отзывы:</h1>
                     </div>
-                    <div class="reviews_section">
-                        @auth
-                        <form method="post" action="{{ route('reviews.create', $course->id) }}">
-                            <div class="reviews_section_right">
-                                @csrf
-                                <textarea name="body" rows="3" placeholder="Ваш отзыв о курсе" required></textarea>
-                            </div>
-                            <div class="reviews_section_left">
-                                <button type="submit">Оставить отзыв</button>
-                            </div>
-                            @endauth
-                        </form>
+                    @auth
+                    <div class="reviews_section" method="post" action="{{ route('reviews.create', $course->id) }}">
+                        <div class="reviews_section_right">
+                            @csrf
+                            <textarea name="body" rows="3" placeholder="Ваш отзыв о курсе" required></textarea>
+                        </div>
+                        <div class="reviews_section_left">
+                            <button type="submit">Оставить отзыв</button>
+                        </div>
                     </div>
+                    @endauth
                     <div class="reviews-live">
                         <ul>
                             @foreach ($course->reviews as $review)

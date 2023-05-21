@@ -71,7 +71,7 @@
 <div style="display: flex; justify-content: center; margin-bottom: 20px;">
     <form action="{{ route('courses.search') }}" method="GET" style="width: 50%;">
         <input type="text" name="search" placeholder="Поиск курсов" style="width: 100%; padding: 10px; font-size: 1.2em;">
-        <button type="submit" style="width: 100%; padding: 10px; font-size: 1.2em;">Найти</button>
+        <button type="submit" style="padding: 10px; font-size: 1.2em;">Найти</button>
     </form>
 </div>
 

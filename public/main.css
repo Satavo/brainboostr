@@ -190,6 +190,35 @@ header {
   max-width: 100%;
   object-fit: scale-down;
   border-radius: 10px;
+  opacity: 0;
+}
+
+.content_column img.show{
+  opacity: 1;
+  transition: all 2.0s;
+  transform: translateY(0%);
+}
+
+.content_column_title{
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.5s ease 0.5s;
+}
+
+.content_column_title._active{
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.content_column_text{
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.5s ease 0.5s;
+}
+
+.content_column_text._active{
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 /* Стиль для заголовка */
@@ -220,6 +249,13 @@ header {
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.content_column button.show{
+  opacity: 1;
+  transition: all 2.0s;
+  transform: translateY(0%);
 }
 
 .content_column button:hover {
@@ -793,6 +829,13 @@ button {
   max-width: 50%;
   height: 300px; /* задаем высоту контейнера карты */
   padding-right: 20px;
+  opacity: 0;
+}
+
+.navigation-container.show{
+  opacity: 1;
+  transition: all 2.0s;
+  transform: translateY(0%);
 }
 
 @media (min-width: 768px) {

@@ -20,12 +20,27 @@ let options = {
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('.howitswork_column img');
 let elements1 = document.querySelectorAll('.container img');
+let elements2 = document.querySelectorAll('.content_column img');
+let elements3 = document.querySelectorAll('.navigation-container');
+let elements4 = document.querySelectorAll('.content_column button');
 
 for (let elm of elements) {
   observer.observe(elm);
 }
 
 for (let elm of elements1) {
+  observer.observe(elm);
+}
+
+for (let elm of elements2) {
+  observer.observe(elm);
+}
+
+for (let elm of elements3) {
+  observer.observe(elm);
+}
+
+for (let elm of elements4) {
   observer.observe(elm);
 }
 

@@ -97,3 +97,4 @@ Route::get('/courses/{id}', 'App\Http\Controllers\CourseController@show');
 Route::get('/courses/{course}', 'App\Http\Controllers\CourseController@show')->name('courses.show');
 Route::post('/courses/{course}/enroll', 'App\Http\Controllers\CourseController@enroll')->name('enroll');
 Route::get('/personal', 'App\Http\Controllers\CourseController@userEnrollments');
+Route::post('/courses/{id}/reviews', 'App\Http\Controllers\ReviewController@create')->name('reviews.create');

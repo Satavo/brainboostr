@@ -53,24 +53,32 @@
                         <div class="description">
                             <p>{{ $course->description }}</p>
                         </div>
-                        <div>
-                            <h4>Отзывы:</h4>
-                            <ul>
+                    </div>  
+                </div>
+                <div class="reviews">
+                    <div class="reviews_title">
+                        <h1>Отзывы:</h1>
+                    </div>
+                    <div class="reviews_section">
+                        @auth
+                        <form method="post" action="{{ route('reviews.create', $course->id) }}">
+                            <div class="reviews_section_right">
+                                @csrf
+                                <textarea name="body" rows="3" placeholder="Ваш отзыв о курсе" required></textarea>
+                            </div>
+                            <div class="reviews_section_left">
+                                <button type="submit">Оставить отзыв</button>
+                            </div>
+                            @endauth
+                        </form>
+                    </div>
+                    <div class="reviews-live">
+                        <ul>
                             @foreach ($course->reviews as $review)
                                 <li>{{ $review->body }} ({{ $review->user->name }})</li>
                             @endforeach
-                            </ul>
-                            @auth
-                                <form method="post" action="{{ route('reviews.create', $course->id) }}">
-                                    @csrf
-                                    <textarea name="body" rows="3" placeholder="Введите свой отзыв" required></textarea>
-                                    <div>
-                                        <button type="submit">Оставить отзыв</button>
-                                    </div>
-                                </form>
-                            @endauth
-                        </div>
-                    </div>  
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

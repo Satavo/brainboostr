@@ -463,6 +463,7 @@
 	justify-content: space-between;
 	background-color: #ffffff;
 	margin-bottom: 10px;
+	gap: 20px;
    }
 
    .top_left {
@@ -474,7 +475,6 @@
 	background-color: #e8e8e8;
 	border-radius: 10px;
 	padding: 10px;
-	margin-right: 10px;
    }
 
    .subject {
@@ -514,7 +514,6 @@
 	background-color: #e8e8e8;
 	border-radius: 10px;
 	padding: 10px;
-	margin-left: 10px;
    }
 
    .image{
@@ -550,6 +549,7 @@
 	transition: transform 0.3s ease-out;
 	border-radius: 20px;
 	color: #ffffff;
+	padding: 5px;
    }
 
    .subscribe button:hover{
@@ -570,6 +570,8 @@
 	justify-content: space-between;
 	background-color: #ffffff;
 	margin-top: 10px;
+	margin-bottom: 10px;
+	gap: 20px;
    }
 
    .bottom_left{
@@ -577,7 +579,6 @@
 	background-color: #e8e8e8;
 	border-radius: 10px;
 	padding: 10px;
-	margin-right: 10px;
    }
 
    .experience{
@@ -593,7 +594,6 @@
 	background-color: #e8e8e8;
 	border-radius: 10px;
 	padding: 10px;
-	margin-left: 10px;
    }
 
    .description{
@@ -603,4 +603,73 @@
    .description p {
 	margin: 0px;
    }
-  
+
+   .reviews{
+	display: flex;
+	margin-top: 10px;
+	flex-direction: column;
+   }
+   
+   .reviews_title{
+	display: flex;
+	margin-bottom: 10px;
+   }
+
+   .reviews_section{
+	margin-top: 10px;
+	margin-bottom: 10px;
+   }
+
+   form{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 20px;
+   }
+
+   .reviews_section_right{
+	width: 50%;
+   }
+
+   textarea {
+	width: 100%;
+	border-radius: 10px;
+	border-color: #000;
+	background-color: #e8e8e8;
+   }
+
+   .reviews_section_left{
+	padding-top: 20px;
+	width: 50%;
+   }
+
+   .reviews_section_left button{
+	border: none;
+	background-color: #724321;
+	transition: transform 0.3s ease-out;
+	border-radius: 20px;
+	color: #ffffff;
+	padding: 5px;
+   }
+
+   .reviews_section_left button:hover{
+	background-color: rgba(114, 73, 33, 0.5);
+   }
+
+   ul{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	list-style-type: none;
+	padding: 0px!important;
+   }
+
+   .reviews-live li{
+	background-color: #e8e8e8;
+	border-radius: 10px;
+	width: 50%;
+	max-height: 100%;
+	padding: 20px;
+   }

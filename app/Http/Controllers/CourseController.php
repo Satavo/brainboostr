@@ -51,6 +51,7 @@ class CourseController extends Controller
                                  ->get();
         return view('courses.show', compact('course'));
     }
+
     public function userEnrollments()
     {
         $user_id = auth()->user()->id;
@@ -60,6 +61,7 @@ class CourseController extends Controller
         
         return view('personal', compact('enrollments'));
     }
+
     public function enroll($course, Request $request)
     {
         // Проверяем, что пользователь авторизован
@@ -70,7 +72,7 @@ class CourseController extends Controller
                                      ->first();
             if ($enrollment) {
                 // Пользователь уже зарегистрирован на этот курс, перенаправляем на страницу курса
-                return redirect()->route('courses.show', ['course' => $course]);
+                return redirect()->route('personal', ['course' => $course]);
             } else {
                 // Проводим необходимые проверки и получаем данные из формы
                 $course = Course::find($course);
@@ -81,7 +83,7 @@ class CourseController extends Controller
                 $enrollment->course_id = $course->id;
                 $enrollment->save();
                 // Редиректим пользователя на страницу курса
-                return redirect()->route('courses.show', ['course' => $course]);
+                return redirect()->route('personal', ['course' => $course]);
             }
         }
     

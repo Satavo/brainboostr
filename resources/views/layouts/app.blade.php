@@ -19,6 +19,7 @@
                 body {
                     background: linear-gradient(to bottom, #b8bc99, #ffffff, #b8bc99);
                     min-height: 100vh;
+                    min-width: 100vh;;
                     margin: 0px;
                     padding: 0px;
                 }

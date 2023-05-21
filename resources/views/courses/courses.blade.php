@@ -81,7 +81,7 @@
         @if (strpos(strtolower($course->subject), strtolower($search)) !== false)
             <?php $found = true; ?>
             <div class="card" onclick="window.location.href='{{ route('courses.show', $course->id) }}'">
-                <div class="card-image" style="background-image: url('{{ asset('images/' . $course->image) }}')"></div>
+                <div class="card-image" style="background-image: url('{{ asset('images/' . $course->image) }}'); border-radius: 20px;" ></div>
                 <div class="card-content">
                     <h2 class="card-subject">{{ $course->subject }}</h2>
                     <h4 class="card-place">{{ $course->place }}</h4>

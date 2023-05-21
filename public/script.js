@@ -4,6 +4,71 @@ function goToBrainBoostr() {
   window.location.assign('/');
 }
 
+/*Анимация main*/
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('show');
+    } else {
+      change.target.classList.remove('show')
+    }
+  }); 
+}
+
+let options = {
+  threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.howitswork_column img');
+let elements1 = document.querySelectorAll('.container img');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+
+for (let elm of elements1) {
+  observer.observe(elm);
+}
+
+const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0){
+  window.addEventListener('scroll', animOnScroll);
+  function animOnScroll() {
+     for (let index = 0; index < animItems.length; index++){
+        const animItem = animItems[index];
+        const animItemHeight = animItem.offsetHeight;
+        const animItemOffset =  offset(animItem).top;
+        const animStart = 4;
+    let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+    if (animItemHeight > window.innerHeight) {
+      animItemPoint = window.innerHeight - window.innerHeight / animStart;
+    }
+
+    if((window.scrollY > animItemOffset - animItemPoint) && window.scrollY < (animItemOffset + animItemHeight)) {
+      animItem.classList.add('_active')
+    } else {
+      if(!animItem.classList.contains('_anim-no-hide')) { 
+        animItem.classList.remove('_active');
+      }
+    }
+ }
+
+  }
+  function offset(el){
+    const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.scrollY || document.documentElement.scrollTop;
+    return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+  }
+
+  setTimeout(() => {
+    animOnScroll();
+  }, 300);
+}
+
+
+
 /*Стрелки перелистывания отзывов*/
 const reviewers = document.querySelector('.reviewers');
 const reviewers_second = document.querySelector('.reviewers_second');
@@ -48,7 +113,8 @@ ymaps.ready(function () {
   });
 });
 
-/*Main.html*/
+
+/*Main*/
 /*if guest*/
 function Guest() 
 {
@@ -88,65 +154,3 @@ function Fourth()
 }
 const btn4 = document.getElementById('btn4');
 btn.addEventListener('click', Fourth);
-
-/*Personal.blade.php to main
-function Five()
-{
-  window.location.assign('/');
-  const servicesSection = document.getElementById('services');
-  servicesSection.scrollIntoView({ behavior: 'smooth' });
-}
-const btn5 = document.getElementById('btn5');
-btn.addEventListener('click', Five);*/
-
-/*Меню Авторизации*/
-const authorization_pageLink = document.querySelector('.menu_authorization');
-authorization_pageLink.addEventListener('click', function(event) {
-  event.preventDefault();
-  window.location.href = '/login';
-});
-
-
-/*Меню личной страницы*/
-const persona_pagelLink = document.querySelector('.menu_personal');
-persona_pagelLink.addEventListener('click', function(event) {
-  event.preventDefault();
-  window.location.href = '/personal';
-});
-
-
-/*Personal_page*/
-const personalLink = document.querySelector('.personal_category');
-personalLink.addEventListener('click', function(event) {
-  event.preventDefault();
-  window.location.href = '/personal';
-});
-
-/*Messages_page*/
-const messagesLink = document.querySelector('.messages_category');
-messagesLink.addEventListener('click', function(event) {
-  event.preventDefault();
-  window.location.href = '/messages';
-});
-
-var modal = document.getElementById("contacts-modal");
-var button = document.getElementById("contacts-header");
-var span = document.getElementsByClassName("close")[0];
-button.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-/*Profile_page*/
-const profileLink = document.querySelector('.profile_category');
-profileLink.addEventListener('click', function(event) {
-  event.preventDefault();
-  window.location.href = 'home';
-});

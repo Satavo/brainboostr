@@ -18,8 +18,8 @@ function onEntry(entry) {
 let options = {
   threshold: [0.5] };
 let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.row');
-let elements1 = document.querySelectorAll('.advantages');
+let elements = document.querySelectorAll('.howitswork_column img');
+let elements1 = document.querySelectorAll('.container img');
 
 for (let elm of elements) {
   observer.observe(elm);
@@ -27,6 +27,44 @@ for (let elm of elements) {
 
 for (let elm of elements1) {
   observer.observe(elm);
+}
+
+const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0){
+  window.addEventListener('scroll', animOnScroll);
+  function animOnScroll() {
+     for (let index = 0; index < animItems.length; index++){
+        const animItem = animItems[index];
+        const animItemHeight = animItem.offsetHeight;
+        const animItemOffset =  offset(animItem).top;
+        const animStart = 4;
+    let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+    if (animItemHeight > window.innerHeight) {
+      animItemPoint = window.innerHeight - window.innerHeight / animStart;
+    }
+
+    if((window.scrollY > animItemOffset - animItemPoint) && window.scrollY < (animItemOffset + animItemHeight)) {
+      animItem.classList.add('_active')
+    } else {
+      if(!animItem.classList.contains('_anim-no-hide')) { 
+        animItem.classList.remove('_active');
+      }
+    }
+ }
+
+  }
+  function offset(el){
+    const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.scrollY || document.documentElement.scrollTop;
+    return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+  }
+
+  setTimeout(() => {
+    animOnScroll();
+  }, 300);
 }
 
 

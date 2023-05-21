@@ -89,9 +89,13 @@
 
     <div class="main">
         <div class="main_content">
-            <h1>Вся помощь в обучении в <br> одном месте.</h1>
-            <h1>Быстро, удобно, <br> квалифицированно.</h1>
-            <p>Удобный интерфейс, высокий уровень специалистов, все что нужно для знаний.</p>
+            <div class="main_content_title _anim-items _anim-no-hide">
+                <h1>Вся помощь в обучении в <br> одном месте.</h1>
+                <h1>Быстро, удобно, <br> квалифицированно.</h1>
+            </div>
+            <div class="main_content_text _anim-items _anim-no-hide">
+                <p>Удобный интерфейс, высокий уровень специалистов, все что нужно для знаний.</p>
+            </div>
         </div>
     </div>
 
@@ -176,18 +180,24 @@
         <div class="row">
             <div class="howitswork_column">
                 <img src="images/howitswork1.png" alt="Картинка 1" style="width: 100px; height: 100px">
-                <h2>Оставь заявку</h2>
-                <p>Мы зададим несколько вопросов, чтобы<br> подробнее понять суть задачи</p>
+                <div class="howitswork_column_content _anim-items">
+                    <h2>Оставь заявку</h2>
+                    <p>Мы зададим несколько вопросов, чтобы<br> подробнее понять суть задачи</p>
+                </div>
             </div>
             <div class="howitswork_column">
                 <img src="images/howitswork2.png" alt="Картинка 2" style="width: 100px; height: 100px">
-                <h2>Дождись ответа репетитора</h2>
-                <p>Заказ сам придет к репетитору. Он напишет,<br> если сможет помочь</p>
+                <div class="howitswork_column_content _anim-items">
+                    <h2>Дождись ответа репетитора</h2>
+                    <p>Заказ сам придет к репетитору. Он напишет,<br> если сможет помочь</p>
+                </div>
             </div>
             <div class="howitswork_column">
                 <img src="images/howitswork3.png" alt="Картинка 3" style="width: 100px; height: 100px">
-                <h2>Выбери понравившегося</h2>
-                <p>О всех деталях и тонкостях договариваетесь в специальном чате</p>
+                <div class="howitswork_column_content _anim-items">
+                    <h2>Выбери понравившегося</h2>
+                    <p>О всех деталях и тонкостях договариваетесь в специальном чате</p>
+                </div>
             </div>
         </div>
     </div>
@@ -200,24 +210,40 @@
         </div>
         <div class="mentors_info">
             <div class="mentor">
-                <img class="hidden" src="images/Mentor1.png" alt="Mentor1" style="width: 200px; height: 200px">
-                <h2>Мария Викторовна</h2>
-                <p>Преподаватель Географии. Подготовка к ЕГЭ</p>
+                <div class="mentor_imagine _anim-items">
+                    <img class="hidden" src="images/Mentor1.png" alt="Mentor1" style="width: 200px; height: 200px">
+                </div>    
+                <div class="mentor_content _anim-items">
+                    <h2>Мария Викторовна</h2>
+                    <p>Преподаватель Географии. Подготовка к ЕГЭ</p>
+                </div>
             </div>
             <div class="mentor">
-                <img src="images/Mentor2.png" alt="Mentor2" style="width: 200px; height: 200px">
-                <h2>Денис Викторович</h2>
-                <p>Преподаватель Физики. Подготовка к ОГЭ</p>
+                <div class="mentor_imagine _anim-items">
+                    <img src="images/Mentor2.png" alt="Mentor2" style="width: 200px; height: 200px">
+                </div>
+                <div class="mentor_content _anim-items">
+                    <h2>Денис Викторович</h2>
+                    <p>Преподаватель Физики. Подготовка к ОГЭ</p>
+                </div>
             </div>
             <div class="mentor">
-                <img src="images/Mentor3.png" alt="Mentor3" style="width: 200px; height: 200px">
-                <h2>Виктория Ивановна</h2>
-                <p>Преподаватель математики. 4-9 класс</p>
+                <div class="mentor_imagine _anim-items">
+                    <img src="images/Mentor3.png" alt="Mentor3" style="width: 200px; height: 200px">
+                </div>
+                <div class="mentor_content _anim-items">
+                    <h2>Виктория Ивановна</h2>
+                    <p>Преподаватель математики. 4-9 класс</p>
+                </div>
             </div>
             <div class="mentor">
-                <img src="images/Mentor4.png" alt="Mentor4" style="width: 200px; height: 200px">
-                <h2>Наталья Сергеевна</h2>
-                <p>Преподаватель истории. Подготовка к ОГЭ</p>
+                <div class="mentor_imagine _anim-items">
+                    <img src="images/Mentor4.png" alt="Mentor4" style="width: 200px; height: 200px">
+                </div>
+                <div class="mentor_content _anim-items">
+                    <h2>Наталья Сергеевна</h2>
+                    <p>Преподаватель истории. Подготовка к ОГЭ</p>
+                </div>
             </div>
         </div>
     </div>
@@ -232,33 +258,49 @@
             <div class="column">
                 <div class="container">
                     <img src="images/circle1.png" alt="Удобный формат">
-                    <div>
-                        <h3>Удобный формат</h3>
-                        <p>Платформа имеет онлайн-обучением. А также мы подберем преподавателя в вашем городе.</p>
+                    <div class="container_content">
+                        <div class="container_content_title _anim-items">
+                            <h3>Удобный формат</h3>
+                        </div>
+                        <div class="container_content_text _anim-items">
+                            <p>Платформа имеет онлайн-обучением. А также мы подберем преподавателя в вашем городе.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="container">
                     <img src="images/circle2.png" alt="Подход к пользователю">
-                    <div>
-                        <h3>Подход к пользователю</h3>
-                        <p>Каждый ученик имеет возможность выбрать репетитора, провести с ним пробное, бесплатное
-                            занятие. А также заменить его в процессе обучения.</p>
+                    <div class="container_content">
+                        <div class="container_content_title _anim-items">
+                            <h3>Подход к пользователю</h3>
+                        </div>
+                        <div class="container_content_text _anim-items">
+                            <p>Каждый ученик имеет возможность выбрать репетитора, провести с ним пробное, бесплатное
+                                занятие. А также заменить его в процессе обучения.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="container">
                     <img src="images/circle3.png" alt="Отбор преподавателей">
-                    <div>
-                        <h3>Отбор преподавателей</h3>
-                        <p>Наши специалисты проходят высокий отбор. 1 из 50 репетиторов попадают к нам в команду.</p>
+                    <div class="container_content">
+                        <div class="container_content_title _anim-items">
+                            <h3>Отбор преподавателей</h3>
+                        </div>
+                        <div class="container_content_text _anim-items">
+                            <p>Наши специалисты проходят высокий отбор. 1 из 50 репетиторов попадают к нам в команду.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="container">
                     <img src="images/circle4.png" alt="Пользовательский интерфейс">
-                    <div>
-                        <h3>Пользовательский интерфейс</h3>
-                        <p>Понятный сайт, проверенный тестировщиками. Оснащен главными аспектами меню.</p>
+                    <div class="container_content">
+                        <div class="container_content_title _anim-items">
+                            <h3>Пользовательский интерфейс</h3>
+                        </div>
+                        <div class="container_content_text _anim-items">
+                            <p>Понятный сайт, проверенный тестировщиками. Оснащен главными аспектами меню.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -267,12 +309,18 @@
     <div class="info">
         <div class="background-image"></div>
         <div class="info_content">
-            <h2>О компании</h2>
+            <div class="info_content_title">
+                <h2>О компании</h2>
+            </div>
             <hr>
-            <p>Наш сайт берет начало в 2017 году. Нам скоро 5 лет. Квалифицированные преподаватели способны подобрать
-                индивидуальный подход к каждому своему ученику. Главным нашим вдохновением - являетесь вы, ваши успехи и
-                знания. За время существования платформы мы выпустили не малое количество учеников. Приятных знаний !
-            </p>
+            <div class="info_content_text _anim-items">
+                <p>Наш сайт берет начало в 2017 году. Нам скоро 5 лет.</p>
+                <p>Квалифицированные преподаватели способны подобрать</p>
+                <p>индивидуальный подход к каждому своему ученику. Главным</p>
+                <p>нашим вдохновением - являетесь вы, ваши успехи и знания. За</p>
+                <p>время существования платформы мы выпустили не малое</p>
+                <p>количество учеников. Приятных знаний !</p>
+            </div>
         </div>
     </div>
 

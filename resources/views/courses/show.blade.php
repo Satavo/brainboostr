@@ -60,7 +60,8 @@
                         <h1>Отзывы:</h1>
                     </div>
                     @auth
-                    <div class="reviews_section" method="post" action="{{ route('reviews.create', $course->id) }}">
+                    @if(auth()->user()->role === 'student')
+                    <form class="reviews_section" method="post" action="{{ route('reviews.create', $course->id) }}">
                         <div class="reviews_section_right">
                             @csrf
                             <textarea name="body" rows="3" placeholder="Ваш отзыв о курсе" required></textarea>
@@ -68,8 +69,7 @@
                         <div class="reviews_section_left">
                             <button type="submit">Оставить отзыв</button>
                         </div>
-                    </div>
-                    @endauth
+                    </form>
                     <div class="reviews-live">
                         <ul>
                             @foreach ($course->reviews as $review)
@@ -77,6 +77,17 @@
                             @endforeach
                         </ul>
                     </div>
+                    @endif
+                    @if (auth()->user()->role === 'teacher')
+                    <div class="reviews-live">
+                        <ul>
+                            @foreach ($course->reviews as $review)
+                                <li>{{ $review->body }} ({{ $review->user->name }})</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+                    @endauth
                 </div>
             </div>
         </div>

@@ -76,6 +76,17 @@ header {
   background-color: #b8bc99;
 }
 
+.main::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  transform: translate(0px, 200%);
+  background: linear-gradient(180deg, rgba(184, 188, 153) 30%, #ffffff 70%);
+}
+
 .main_content {
   max-width: 1200px;
   margin: 0px 70px;
@@ -308,6 +319,28 @@ button {
   max-width: 1960px;
 }
 
+.howitswork::before {
+  content: "";
+  position: absolute;
+  top: 165%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  transform: translate(0px, 200%);
+  background: linear-gradient(180deg, rgba(184, 188, 153) 30%, #ffffff 70%);
+}
+
+.howitswork::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  transform: translate(0px, 200%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 30%, #b8bc99 70%);
+}
+
 /*Анимация*/
 .row {
   display: flex;
@@ -484,6 +517,17 @@ button {
 .about {
   padding: 90px 0px 150px;
   background-color: #b8bc99;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  top: 245%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  transform: translate(0px, 200%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 30%, #b8bc99 70%);
 }
 
 .question {
@@ -814,6 +858,17 @@ button {
   background-color: #b8bc99;
   justify-content: center;
   align-items: center;
+}
+
+.contacts::after {
+  content: "";
+  position: absolute;
+  top: 540%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  transform: translate(0px, 200%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 30%, #b8bc99 70%);
 }
 
 .contact-info {

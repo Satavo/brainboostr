@@ -229,7 +229,7 @@
                 <div class="mentor_imagine _anim-items _anim-no-hide">
                     <img class="hidden" src="images/Mentor1.png" alt="Mentor1" style="width: 200px; height: 200px">
                 </div>    
-                <div class="mentor_content _anim-items">
+                <div class="mentor_content _anim-items _anim-no-hide">
                     <h2>Мария Викторовна</h2>
                     <p>Преподаватель Географии. Подготовка к ЕГЭ</p>
                 </div>

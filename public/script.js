@@ -8,16 +8,20 @@ function goToBrainBoostr() {
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
-     change.target.classList.add('show');
+      change.target.classList.add('show');
+      observer.unobserve(change.target); // stops observing the element once it enters view
     } else {
       change.target.classList.remove('show')
     }
   }); 
 }
 
+let observer = new IntersectionObserver(onEntry, { threshold: 0.2, rootMargin: "0px 0px -100px 0px", once: true });
+let items = document.querySelectorAll("._anim-items");
+items.forEach(item => observer.observe(item));
+
 let options = {
   threshold: [0.5] };
-let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('.howitswork_column img');
 let elements1 = document.querySelectorAll('.container img');
 let elements2 = document.querySelectorAll('.content_column img');

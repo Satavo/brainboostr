@@ -105,10 +105,10 @@
             <div class="content_container">
                 <div class="content_column">
                     <img src="images/1.png" alt="Картинка 1">
-                    <div class="content_column_title _anim-items">
+                    <div class="content_column_title _anim-items _anim-no-hide">
                         <h2>Подготовка к ЕГЭ</h2>
                     </div>
-                    <div class="content_column_text _anim-items">
+                    <div class="content_column_text _anim-items _anim-no-hide">
                         <p>Данный раздел предлагает вам
                             преподавателей специализирующихся
                             по ЕГЭ. У вас есть возможность
@@ -125,10 +125,10 @@
                 </div>
                 <div class="content_column">
                     <img src="images/2.png" alt="Картинка 2">
-                    <div class="content_column_title _anim-items">
+                    <div class="content_column_title _anim-items _anim-no-hide">
                         <h2>Подготовка к ОГЭ</h2>
                     </div>
-                    <div class="content_column_text _anim-items">
+                    <div class="content_column_text _anim-items _anim-no-hide">
                         <p>Данный раздел предлагает вам
                             преподавателей специализирующихся
                             по ОГЭ. У вас есть возможность
@@ -145,10 +145,10 @@
                 </div>
                 <div class="content_column">
                     <img src="images/3.png" alt="Картинка 3">
-                    <div class="content_column_title _anim-items">
+                    <div class="content_column_title _anim-items _anim-no-hide">
                         <h2>Школьные предметы</h2>
                     </div>
-                    <div class="content_column_text _anim-items">
+                    <div class="content_column_text _anim-items _anim-no-hide">
                         <p>Данный раздел предлагает вам
                             преподавателей любой категории.
                             Здесь вы можете, как подтянуть
@@ -168,10 +168,10 @@
                 </div>
                 <div class="content_column">
                     <img src="images/4 stack.jpg" alt="Картинка 4">
-                    <div class="content_column_title _anim-items">
+                    <div class="content_column_title _anim-items _anim-no-hide">
                         <h2>Помощь студентам</h2>
                     </div>
-                    <div class="content_column_text _anim-items">
+                    <div class="content_column_text _anim-items _anim-no-hide">
                         <p>Данный раздел предлагает вам
                             преподавателей
                             спецаиализирующихся на студентах.
@@ -196,21 +196,21 @@
         <div class="row">
             <div class="howitswork_column">
                 <img src="images/howitswork1.png" alt="Картинка 1" style="width: 100px; height: 100px">
-                <div class="howitswork_column_content _anim-items">
+                <div class="howitswork_column_content _anim-items _anim-no-hide">
                     <h2>Выберите курс</h2>
                     <p>Найдите подходящий для себя курс<br> и запишитесь на него</p>
                 </div>
             </div>
             <div class="howitswork_column">
                 <img src="images/howitswork2.png" alt="Картинка 2" style="width: 100px; height: 100px">
-                <div class="howitswork_column_content _anim-items">
+                <div class="howitswork_column_content _anim-items _anim-no-hide">
                     <h2>Дождись ответа репетитора</h2>
                     <p>Уведомление придет к репетитору.<br> Он напишет, если сможет помочь</p>
                 </div>
             </div>
             <div class="howitswork_column">
                 <img src="images/howitswork3.png" alt="Картинка 3" style="width: 100px; height: 100px">
-                <div class="howitswork_column_content _anim-items">
+                <div class="howitswork_column_content _anim-items _anim-no-hide">
                     <h2>Выбери понравившегося</h2>
                     <p>О всех деталях и тонкостях договариваетесь с репетитором</p>
                 </div>
@@ -226,7 +226,7 @@
         </div>
         <div class="mentors_info">
             <div class="mentor">
-                <div class="mentor_imagine _anim-items">
+                <div class="mentor_imagine _anim-items _anim-no-hide">
                     <img class="hidden" src="images/Mentor1.png" alt="Mentor1" style="width: 200px; height: 200px">
                 </div>    
                 <div class="mentor_content _anim-items">
@@ -235,28 +235,28 @@
                 </div>
             </div>
             <div class="mentor">
-                <div class="mentor_imagine _anim-items">
+                <div class="mentor_imagine _anim-items _anim-no-hide">
                     <img src="images/Mentor2.png" alt="Mentor2" style="width: 200px; height: 200px">
                 </div>
-                <div class="mentor_content _anim-items">
+                <div class="mentor_content _anim-items _anim-no-hide">
                     <h2>Денис Викторович</h2>
                     <p>Преподаватель Физики. Подготовка к ОГЭ</p>
                 </div>
             </div>
             <div class="mentor">
-                <div class="mentor_imagine _anim-items">
+                <div class="mentor_imagine _anim-items _anim-no-hide">
                     <img src="images/Mentor3.png" alt="Mentor3" style="width: 200px; height: 200px">
                 </div>
-                <div class="mentor_content _anim-items">
+                <div class="mentor_content _anim-items _anim-no-hide">
                     <h2>Виктория Ивановна</h2>
                     <p>Преподаватель математики. 4-9 класс</p>
                 </div>
             </div>
             <div class="mentor">
-                <div class="mentor_imagine _anim-items">
+                <div class="mentor_imagine _anim-items _anim-no-hide">
                     <img src="images/Mentor4.png" alt="Mentor4" style="width: 200px; height: 200px">
                 </div>
-                <div class="mentor_content _anim-items">
+                <div class="mentor_content _anim-items _anim-no-hide">
                     <h2>Наталья Сергеевна</h2>
                     <p>Преподаватель истории. Подготовка к ОГЭ</p>
                 </div>
@@ -275,10 +275,10 @@
                 <div class="container">
                     <img src="images/circle1.png" alt="Удобный формат">
                     <div class="container_content">
-                        <div class="container_content_title _anim-items">
+                        <div class="container_content_title _anim-items _anim-no-hide">
                             <h3>Удобный формат</h3>
                         </div>
-                        <div class="container_content_text _anim-items">
+                        <div class="container_content_text _anim-items _anim-no-hide">
                             <p>Платформа имеет онлайн-обучением. А также мы подберем преподавателя в вашем городе.</p>
                         </div>
                     </div>
@@ -286,10 +286,10 @@
                 <div class="container">
                     <img src="images/circle2.png" alt="Подход к пользователю">
                     <div class="container_content">
-                        <div class="container_content_title _anim-items">
+                        <div class="container_content_title _anim-items _anim-no-hide">
                             <h3>Подход к пользователю</h3>
                         </div>
-                        <div class="container_content_text _anim-items">
+                        <div class="container_content_text _anim-items _anim-no-hide">
                             <p>Каждый ученик имеет возможность выбрать репетитора, провести с ним пробное, бесплатное
                                 занятие. А также заменить его в процессе обучения.</p>
                         </div>
@@ -300,10 +300,10 @@
                 <div class="container">
                     <img src="images/circle3.png" alt="Отбор преподавателей">
                     <div class="container_content">
-                        <div class="container_content_title _anim-items">
+                        <div class="container_content_title _anim-items _anim-no-hide">
                             <h3>Отбор преподавателей</h3>
                         </div>
-                        <div class="container_content_text _anim-items">
+                        <div class="container_content_text _anim-items _anim-no-hide">
                             <p>Наши специалисты проходят высокий отбор. 1 из 50 репетиторов попадают к нам в команду.</p>
                         </div>
                     </div>
@@ -311,10 +311,10 @@
                 <div class="container">
                     <img src="images/circle4.png" alt="Пользовательский интерфейс">
                     <div class="container_content">
-                        <div class="container_content_title _anim-items">
+                        <div class="container_content_title _anim-items _anim-no-hide">
                             <h3>Пользовательский интерфейс</h3>
                         </div>
-                        <div class="container_content_text _anim-items">
+                        <div class="container_content_text _anim-items _anim-no-hide">
                             <p>Понятный сайт, проверенный тестировщиками. Оснащен главными аспектами меню.</p>
                         </div>
                     </div>
@@ -329,7 +329,7 @@
                 <h2>О компании</h2>
             </div>
             <hr>
-            <div class="info_content_text _anim-items">
+            <div class="info_content_text _anim-items _anim-no-hide">
                 <p>Наш сайт берет начало в 2017 году. Нам скоро 5 лет.</p>
                 <p>Квалифицированные преподаватели способны подобрать</p>
                 <p>индивидуальный подход к каждому своему ученику. Главным</p>

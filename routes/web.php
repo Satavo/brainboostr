@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Auth\Events\PasswordReset;
 
+
 Route::get('/', action: 'App\Http\Controllers\MainController@main');
 
 Auth::routes();
@@ -93,8 +94,8 @@ Route::get('/courses', 'App\Http\Controllers\CourseController@index');
 Route::get('/courses/create', function() { return view ('courses.coursecreate'); }) -> middleware('teachermiddleware');
 Route::post('/courses', 'App\Http\Controllers\CourseController@create');
 Route::get('/courses/search', 'App\Http\Controllers\CourseController@index')->name('courses.search');
-Route::get('/courses/{id}', 'App\Http\Controllers\CourseController@show');
-Route::get('/courses/{course}', 'App\Http\Controllers\CourseController@show')->name('courses.show');
-Route::post('/courses/{course}/enroll', 'App\Http\Controllers\CourseController@enroll')->name('enroll');
-Route::get('/personal', 'App\Http\Controllers\CourseController@userEnrollments');
-Route::post('/courses/{id}/reviews', 'App\Http\Controllers\ReviewController@create')->name('reviews.create');
+Route::get('/courses/{id}', 'App\Http\Controllers\CourseController@show') -> middleware('auth');
+Route::get('/courses/{course}', 'App\Http\Controllers\CourseController@show')->name('courses.show') -> middleware('auth');
+Route::post('/courses/{course}/enroll', 'App\Http\Controllers\CourseController@enroll')->name('enroll') -> middleware('auth');
+Route::get('/personal', 'App\Http\Controllers\CourseController@userEnrollments') -> middleware('auth');
+Route::post('/courses/{id}/reviews', 'App\Http\Controllers\ReviewController@create')->name('reviews.create') -> middleware('auth');
